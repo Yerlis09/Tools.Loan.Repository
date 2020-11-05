@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "BL03Yps67W1TvjDUc24sfSkhsSmxrKcFiGgZxYETw9Ly3WPygUTv1OI3v61/dhZOYLhZliCDpv0DxGCDSIFKWA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\caste\\source\\repos\\ToolsLoan.Solution\\Tools.Loan.DataAcces\\Tools.Loan.DataAcces.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\caste\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\caste\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
