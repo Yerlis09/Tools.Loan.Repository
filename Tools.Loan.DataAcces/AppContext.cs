@@ -29,10 +29,19 @@ namespace Tools.Loan.DataAcces
                Id= 1,
                RoleName = "Admin",
 
-           });
+           },
+            new Role
+            {
+                Id = 2,
+                RoleName = "Encargado",
+
+            }
+
+           );
             modelBuilder.Entity<Role>().HasIndex(x => x.RoleName).IsUnique();
 
             modelBuilder.Entity<Usuario>().HasKey(x => x.Id);
+            // esto es para llenar la base que datos sin necidad de yo hacerlo manuelamente al crearla 
             modelBuilder.Entity<Usuario>().HasData(new Usuario { Id = 1, Nombre = "Admin", Password = "123", UserName = "Admin", RoleId = 1 });
            
             modelBuilder.Entity<Usuario>().HasOne(x => x.Role).WithMany(x=> x.Usuarios).HasForeignKey(x=> x.RoleId);

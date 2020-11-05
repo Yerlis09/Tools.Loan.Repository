@@ -7,18 +7,21 @@ using System.Text;
 using System.Threading.Tasks;
 using Tools.Loan.DataAcces.Repositories;
 using Tools.Loan.Domain;
+using Tools.Loan.Shared;
 
 namespace Tools.Loan.DataAcces.Services
 {
     public class UsuarioService
     {
         // valida el login pero metele mas logica para validar los strings que dentren 
-        public async  Task<bool> LoginAsync(string UserName ,string Password)
+        public async  Task<LoginSuccessModel> LoginAsync(string UserName ,string Password)
         {
             // te dejo esta capa para otro dia IRepository<Usuario> repository =  new BaseRepository<Usuario>(new AppContext()
             using (var context = new AppContext())
             {
-                return await context.Set<Usuario>().AnyAsync(x => x.UserName.ToLower().Equals(UserName.ToLower()) && x.Password == Password);
+                var result =await context.Set<Usuario>().Include(x=> x.Role)
+                    .Where(x => x.UserName.ToLower().Equals(UserName.Trim().ToLower()) && x.Password.Equals(Password)).Select(x=> new LoginSuccessModel { UserName = x.UserName, Role = x.Role.RoleName, UserId = x.Id}).FirstOrDefaultAsync();
+                return result;
             }
         }
         public async Task<Usuario> GetUserByIdAsync(string id)

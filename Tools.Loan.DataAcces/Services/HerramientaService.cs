@@ -39,7 +39,7 @@ namespace Tools.Loan.DataAcces.Services
             }
         }
 
-
+        // aqui tienes un ejemeplo
         public async Task PrestarHerramientaAsync(CrearHerrramintaModel model)
         {
             if (model == null)

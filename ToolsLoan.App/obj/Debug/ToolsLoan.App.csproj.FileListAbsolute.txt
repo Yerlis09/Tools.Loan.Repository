@@ -6,7 +6,6 @@ C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\bin\Debug\Tools.Loan.DataAcces.pdb
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\bin\Debug\Tools.Loan.Domain.pdb
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.csprojAssemblyReference.cache
-C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.Form1.resources
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.Properties.Resources.resources
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.csproj.GenerateResource.cache
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.csproj.CoreCompileInputs.cache
@@ -73,3 +72,8 @@ C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\bin\Debug\Microsoft.EntityFrameworkCore.SqlServer.xml
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\bin\Debug\Tools.Loan.Shared.dll
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\bin\Debug\Tools.Loan.Shared.pdb
+C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.Login.resources
+C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.Herramienta.resources
+C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.AdministradorForm.resources
+C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.Usuarios.resources
+C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.EncargadoForm.resources
