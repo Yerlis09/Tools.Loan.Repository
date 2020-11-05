@@ -1,0 +1,9 @@
+C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\Tools.Loan.Domain\bin\Debug\netstandard2.0\Tools.Loan.Domain.deps.json
+C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\Tools.Loan.Domain\bin\Debug\netstandard2.0\Tools.Loan.Domain.dll
+C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\Tools.Loan.Domain\obj\Debug\netstandard2.0\Tools.Loan.Domain.csprojAssemblyReference.cache
+C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\Tools.Loan.Domain\obj\Debug\netstandard2.0\Tools.Loan.Domain.AssemblyInfoInputs.cache
+C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\Tools.Loan.Domain\obj\Debug\netstandard2.0\Tools.Loan.Domain.AssemblyInfo.cs
+C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\Tools.Loan.Domain\bin\Debug\netstandard2.0\Tools.Loan.Domain.pdb
+C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\Tools.Loan.Domain\obj\Debug\netstandard2.0\Tools.Loan.Domain.csproj.CoreCompileInputs.cache
+C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\Tools.Loan.Domain\obj\Debug\netstandard2.0\Tools.Loan.Domain.dll
+C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\Tools.Loan.Domain\obj\Debug\netstandard2.0\Tools.Loan.Domain.pdb

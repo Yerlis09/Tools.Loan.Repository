@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tools.Loan.DataAcces.Services;
 
 namespace ToolsLoan.App
 {
@@ -20,6 +21,16 @@ namespace ToolsLoan.App
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private async  void button1_Click(object sender, EventArgs e)
+        {
+            UsuarioService sr = new UsuarioService();
+            var result = await sr.LoginAsync(textBox1.Text, textBox2.Text);
+            if(result == true)
+            MessageBox.Show("logeado");
+            else
+                MessageBox.Show("buuu");
         }
     }
 }

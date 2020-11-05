@@ -1,0 +1,9 @@
+﻿agragar cambios ala al diseno de la db 
+Add-Migration
+// borrar la db 
+Drop-Database
+Get-DbContext
+Scaffold-DbContext
+Script-Migrations
+// actulizar la db 
+Update-Database
