@@ -34,7 +34,6 @@ namespace Tools.Loan.DataAcces.Services
                     Marca = model.Marca,
                     Nombre = model.Nombre,
                     Serial = model.Serial,
-
                 };
                 for (int i = 0; i < model.Stock; i++)
                 {
