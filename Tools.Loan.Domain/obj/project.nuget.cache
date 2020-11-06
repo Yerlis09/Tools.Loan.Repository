@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "vxjcAg/L627W/OX8+IECfYhGbzJBB8yplDZzMTRoYbFsFb7FtiJUKB4rNznN8TQgX6WzE2ju5bsQUDpXB8sSAQ==",
+  "dgSpecHash": "jbxju2xLGAfORnT5jehqvzmccJionu2iC3Ah11ShN9H0JJfvkp4pAMEuoeMF+Gq5SJaD9vyRasCEVVCo6PHDfA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\caste\\OneDrive\\Escritorio\\Proyecto\\Tools.Loan.Repository\\Tools.Loan.Domain\\Tools.Loan.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Wilirambo\\Documents\\Tools.Loan.Repository\\Tools.Loan.Domain\\Tools.Loan.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\caste\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\caste\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\caste\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
+    "C:\\Users\\Wilirambo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Wilirambo\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

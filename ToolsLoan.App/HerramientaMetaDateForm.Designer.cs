@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btneli = new System.Windows.Forms.Button();
@@ -44,16 +45,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnguardar = new System.Windows.Forms.Button();
-            this.txtnombre = new System.Windows.Forms.TextBox();
-            this.txtapellido = new System.Windows.Forms.TextBox();
-            this.txtcontra = new System.Windows.Forms.TextBox();
-            this.txtuser = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.serialTxt = new System.Windows.Forms.TextBox();
+            this.marcaTxtBox = new System.Windows.Forms.TextBox();
+            this.herramientaTxt = new System.Windows.Forms.TextBox();
+            this.CategoriacomboBox = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.stock_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stock_numericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // panel6
@@ -66,6 +69,16 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(274, 38);
             this.panel6.TabIndex = 25;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::ToolsLoan.App.Properties.Resources.search_30px;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(43, 28);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
             // 
             // txtBuscar
             // 
@@ -180,15 +193,17 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.stock_numericUpDown);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.CategoriacomboBox);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnguardar);
-            this.groupBox1.Controls.Add(this.txtnombre);
-            this.groupBox1.Controls.Add(this.txtapellido);
-            this.groupBox1.Controls.Add(this.txtcontra);
-            this.groupBox1.Controls.Add(this.txtuser);
+            this.groupBox1.Controls.Add(this.serialTxt);
+            this.groupBox1.Controls.Add(this.marcaTxtBox);
+            this.groupBox1.Controls.Add(this.herramientaTxt);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(445, 123);
             this.groupBox1.Name = "groupBox1";
@@ -245,52 +260,61 @@
             this.btnguardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnguardar.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnguardar.Location = new System.Drawing.Point(62, 191);
+            this.btnguardar.Location = new System.Drawing.Point(62, 209);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(252, 40);
             this.btnguardar.TabIndex = 7;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = false;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
-            // txtnombre
+            // serialTxt
             // 
-            this.txtnombre.Location = new System.Drawing.Point(135, 103);
-            this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(179, 26);
-            this.txtnombre.TabIndex = 4;
+            this.serialTxt.Location = new System.Drawing.Point(135, 103);
+            this.serialTxt.Name = "serialTxt";
+            this.serialTxt.Size = new System.Drawing.Size(179, 26);
+            this.serialTxt.TabIndex = 4;
             // 
-            // txtapellido
+            // marcaTxtBox
             // 
-            this.txtapellido.Location = new System.Drawing.Point(135, 132);
-            this.txtapellido.Name = "txtapellido";
-            this.txtapellido.Size = new System.Drawing.Size(179, 26);
-            this.txtapellido.TabIndex = 3;
+            this.marcaTxtBox.Location = new System.Drawing.Point(135, 74);
+            this.marcaTxtBox.Name = "marcaTxtBox";
+            this.marcaTxtBox.Size = new System.Drawing.Size(179, 26);
+            this.marcaTxtBox.TabIndex = 1;
             // 
-            // txtcontra
+            // herramientaTxt
             // 
-            this.txtcontra.Location = new System.Drawing.Point(135, 74);
-            this.txtcontra.Name = "txtcontra";
-            this.txtcontra.Size = new System.Drawing.Size(179, 26);
-            this.txtcontra.TabIndex = 1;
+            this.herramientaTxt.Location = new System.Drawing.Point(135, 46);
+            this.herramientaTxt.Name = "herramientaTxt";
+            this.herramientaTxt.Size = new System.Drawing.Size(179, 26);
+            this.herramientaTxt.TabIndex = 0;
             // 
-            // txtuser
+            // CategoriacomboBox
             // 
-            this.txtuser.Location = new System.Drawing.Point(135, 46);
-            this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(179, 26);
-            this.txtuser.TabIndex = 0;
+            this.CategoriacomboBox.FormattingEnabled = true;
+            this.CategoriacomboBox.Location = new System.Drawing.Point(135, 135);
+            this.CategoriacomboBox.Name = "CategoriacomboBox";
+            this.CategoriacomboBox.Size = new System.Drawing.Size(179, 26);
+            this.CategoriacomboBox.TabIndex = 12;
             // 
-            // pictureBox3
+            // label5
             // 
-            this.pictureBox3.Image = global::ToolsLoan.App.Properties.Resources.search_30px;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 28);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 15;
-            this.pictureBox3.TabStop = false;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(80, 171);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 18);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Stock";
             // 
-            // Herramienta
+            // stock_numericUpDown
+            // 
+            this.stock_numericUpDown.Location = new System.Drawing.Point(135, 168);
+            this.stock_numericUpDown.Name = "stock_numericUpDown";
+            this.stock_numericUpDown.Size = new System.Drawing.Size(179, 26);
+            this.stock_numericUpDown.TabIndex = 15;
+            // 
+            // HerramientaMetaDateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -303,16 +327,17 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Herramienta";
+            this.Name = "HerramientaMetaDateForm";
             this.Text = "Administrador";
             this.Load += new System.EventHandler(this.Herramienta_Load);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stock_numericUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -333,9 +358,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnguardar;
-        private System.Windows.Forms.TextBox txtnombre;
-        private System.Windows.Forms.TextBox txtapellido;
-        private System.Windows.Forms.TextBox txtcontra;
-        private System.Windows.Forms.TextBox txtuser;
+        private System.Windows.Forms.TextBox serialTxt;
+        private System.Windows.Forms.TextBox marcaTxtBox;
+        private System.Windows.Forms.TextBox herramientaTxt;
+        private System.Windows.Forms.ComboBox CategoriacomboBox;
+        private System.Windows.Forms.NumericUpDown stock_numericUpDown;
+        private System.Windows.Forms.Label label5;
     }
 }

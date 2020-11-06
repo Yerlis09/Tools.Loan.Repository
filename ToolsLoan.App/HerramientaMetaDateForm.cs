@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tools.Loan.DataAcces.Services;
+using Tools.Loan.Shared;
 
 namespace ToolsLoan.App
 {
@@ -26,6 +27,7 @@ namespace ToolsLoan.App
         private async Task LoadData()
         {
             dataGridView2.DataSource =await  _herramientaService.GetHerramientaTableAsync();
+            CategoriacomboBox.Items.AddRange((await _herramientaService.GetAllCategoriesAsync()).ToArray());
         }
         // mira si pudes arglar esto 
         private async void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -43,6 +45,22 @@ namespace ToolsLoan.App
                     MessageBox.Show("No hay historial en este articulo");
                 }
             }
+        }
+
+        private async void btnguardar_Click(object sender, EventArgs e)
+        {
+            btnguardar.Enabled = false; 
+
+           await  _herramientaService.CrearHerramientasAsync(new CrearHerrramintaModel {
+                   Categoria = (string)CategoriacomboBox.SelectedItem,
+                   Marca = marcaTxtBox.Text,
+                   Nombre = herramientaTxt.Text, 
+                   Serial = serialTxt.Text,
+                   Stock = (int)stock_numericUpDown.Value,
+           });
+            await LoadData();
+            btnguardar.Enabled = true;
+
         }
     }
 }

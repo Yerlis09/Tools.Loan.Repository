@@ -12,3 +12,17 @@ C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\Tools.Loan.Dat
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\Tools.Loan.DataAcces\obj\Debug\netstandard2.0\Tools.Loan.DataAcces.pdb
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\Tools.Loan.DataAcces\bin\Debug\netstandard2.0\Tools.Loan.Shared.dll
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\Tools.Loan.DataAcces\bin\Debug\netstandard2.0\Tools.Loan.Shared.pdb
+C:\Users\Wilirambo\Documents\Tools.Loan.Repository\Tools.Loan.DataAcces\bin\Debug\netstandard2.0\Tools.Loan.DataAcces.deps.json
+C:\Users\Wilirambo\Documents\Tools.Loan.Repository\Tools.Loan.DataAcces\bin\Debug\netstandard2.0\Tools.Loan.DataAcces.dll
+C:\Users\Wilirambo\Documents\Tools.Loan.Repository\Tools.Loan.DataAcces\bin\Debug\netstandard2.0\Tools.Loan.DataAcces.pdb
+C:\Users\Wilirambo\Documents\Tools.Loan.Repository\Tools.Loan.DataAcces\bin\Debug\netstandard2.0\Tools.Loan.Domain.dll
+C:\Users\Wilirambo\Documents\Tools.Loan.Repository\Tools.Loan.DataAcces\bin\Debug\netstandard2.0\Tools.Loan.Shared.dll
+C:\Users\Wilirambo\Documents\Tools.Loan.Repository\Tools.Loan.DataAcces\bin\Debug\netstandard2.0\Tools.Loan.Domain.pdb
+C:\Users\Wilirambo\Documents\Tools.Loan.Repository\Tools.Loan.DataAcces\bin\Debug\netstandard2.0\Tools.Loan.Shared.pdb
+C:\Users\Wilirambo\Documents\Tools.Loan.Repository\Tools.Loan.DataAcces\obj\Debug\netstandard2.0\Tools.Loan.DataAcces.csprojAssemblyReference.cache
+C:\Users\Wilirambo\Documents\Tools.Loan.Repository\Tools.Loan.DataAcces\obj\Debug\netstandard2.0\Tools.Loan.DataAcces.csproj.CoreCompileInputs.cache
+C:\Users\Wilirambo\Documents\Tools.Loan.Repository\Tools.Loan.DataAcces\obj\Debug\netstandard2.0\Tools.Loan.DataAcces.AssemblyInfoInputs.cache
+C:\Users\Wilirambo\Documents\Tools.Loan.Repository\Tools.Loan.DataAcces\obj\Debug\netstandard2.0\Tools.Loan.DataAcces.AssemblyInfo.cs
+C:\Users\Wilirambo\Documents\Tools.Loan.Repository\Tools.Loan.DataAcces\obj\Debug\netstandard2.0\Tools.Loan.DataAcces.csproj.CopyComplete
+C:\Users\Wilirambo\Documents\Tools.Loan.Repository\Tools.Loan.DataAcces\obj\Debug\netstandard2.0\Tools.Loan.DataAcces.dll
+C:\Users\Wilirambo\Documents\Tools.Loan.Repository\Tools.Loan.DataAcces\obj\Debug\netstandard2.0\Tools.Loan.DataAcces.pdb

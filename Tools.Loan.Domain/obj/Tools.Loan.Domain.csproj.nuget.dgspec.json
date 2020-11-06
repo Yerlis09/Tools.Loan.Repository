@@ -1,21 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\caste\\OneDrive\\Escritorio\\Proyecto\\Tools.Loan.Repository\\Tools.Loan.Domain\\Tools.Loan.Domain.csproj": {}
+    "C:\\Users\\Wilirambo\\Documents\\Tools.Loan.Repository\\Tools.Loan.Domain\\Tools.Loan.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\caste\\OneDrive\\Escritorio\\Proyecto\\Tools.Loan.Repository\\Tools.Loan.Domain\\Tools.Loan.Domain.csproj": {
+    "C:\\Users\\Wilirambo\\Documents\\Tools.Loan.Repository\\Tools.Loan.Domain\\Tools.Loan.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\caste\\OneDrive\\Escritorio\\Proyecto\\Tools.Loan.Repository\\Tools.Loan.Domain\\Tools.Loan.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Wilirambo\\Documents\\Tools.Loan.Repository\\Tools.Loan.Domain\\Tools.Loan.Domain.csproj",
         "projectName": "Tools.Loan.Domain",
-        "projectPath": "C:\\Users\\caste\\OneDrive\\Escritorio\\Proyecto\\Tools.Loan.Repository\\Tools.Loan.Domain\\Tools.Loan.Domain.csproj",
-        "packagesPath": "C:\\Users\\caste\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\caste\\OneDrive\\Escritorio\\Proyecto\\Tools.Loan.Repository\\Tools.Loan.Domain\\obj\\",
+        "projectPath": "C:\\Users\\Wilirambo\\Documents\\Tools.Loan.Repository\\Tools.Loan.Domain\\Tools.Loan.Domain.csproj",
+        "packagesPath": "C:\\Users\\Wilirambo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Wilirambo\\Documents\\Tools.Loan.Repository\\Tools.Loan.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\caste\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Wilirambo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -59,7 +64,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

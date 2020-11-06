@@ -7,3 +7,12 @@ C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\Tools.Loan.Sha
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\Tools.Loan.Shared\obj\Debug\netstandard2.0\Tools.Loan.Shared.csproj.CoreCompileInputs.cache
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\Tools.Loan.Shared\obj\Debug\netstandard2.0\Tools.Loan.Shared.dll
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\Tools.Loan.Shared\obj\Debug\netstandard2.0\Tools.Loan.Shared.pdb
+C:\Users\Wilirambo\Documents\Tools.Loan.Repository\Tools.Loan.Shared\bin\Debug\netstandard2.0\Tools.Loan.Shared.deps.json
+C:\Users\Wilirambo\Documents\Tools.Loan.Repository\Tools.Loan.Shared\bin\Debug\netstandard2.0\Tools.Loan.Shared.dll
+C:\Users\Wilirambo\Documents\Tools.Loan.Repository\Tools.Loan.Shared\bin\Debug\netstandard2.0\Tools.Loan.Shared.pdb
+C:\Users\Wilirambo\Documents\Tools.Loan.Repository\Tools.Loan.Shared\obj\Debug\netstandard2.0\Tools.Loan.Shared.csprojAssemblyReference.cache
+C:\Users\Wilirambo\Documents\Tools.Loan.Repository\Tools.Loan.Shared\obj\Debug\netstandard2.0\Tools.Loan.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Wilirambo\Documents\Tools.Loan.Repository\Tools.Loan.Shared\obj\Debug\netstandard2.0\Tools.Loan.Shared.AssemblyInfoInputs.cache
+C:\Users\Wilirambo\Documents\Tools.Loan.Repository\Tools.Loan.Shared\obj\Debug\netstandard2.0\Tools.Loan.Shared.AssemblyInfo.cs
+C:\Users\Wilirambo\Documents\Tools.Loan.Repository\Tools.Loan.Shared\obj\Debug\netstandard2.0\Tools.Loan.Shared.dll
+C:\Users\Wilirambo\Documents\Tools.Loan.Repository\Tools.Loan.Shared\obj\Debug\netstandard2.0\Tools.Loan.Shared.pdb

@@ -17,10 +17,16 @@ namespace Tools.Loan.DataAcces.Services
                 throw new Exception("el modelo esta bacio");
             using (AppContext con = new AppContext())
             {
-                var categoria = await con.Set<Categoria>().FirstOrDefaultAsync(x => x.Nombre == model.Nombre);
+                var categoria = await con.Set<Categoria>().FirstOrDefaultAsync(x => x.Nombre.Trim().ToLower().Equals(model.Nombre.ToLower().Trim()));
                 if (categoria is null)
-                    throw new Exception("Categoria no encontrada");
-
+                {
+                    categoria = new Categoria
+                    {
+                        Nombre = model.Nombre,
+                    };
+                    con.Set<Categoria>().Add(categoria);
+                }
+                
                 var meta = new HerramientaMetaData
                 {
                     Categoria = categoria,
@@ -35,9 +41,19 @@ namespace Tools.Loan.DataAcces.Services
                     meta.Herramientas.Add(new Herramienta());
                 }
                 con.Set<HerramientaMetaData>().Add(meta);
+                await con.SaveChangesAsync();
 
             }
         }
+
+        public async Task<List<string>> GetAllCategoriesAsync()
+        {
+            using (AppContext con = new AppContext())
+            {
+               return await con.Set<Categoria>().Select(x => x.Nombre).ToListAsync();
+            }
+        }
+
 
         // aqui tienes un ejemeplo
 
