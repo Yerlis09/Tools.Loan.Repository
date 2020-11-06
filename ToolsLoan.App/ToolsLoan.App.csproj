@@ -225,6 +225,9 @@
     <EmbeddedResource Include="EncargadoForm.resx">
       <DependentUpon>EncargadoForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EntradaForm.resx">
+      <DependentUpon>EntradaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestionarPrestamoForm.resx">
       <DependentUpon>GestionarPrestamoForm.cs</DependentUpon>
     </EmbeddedResource>
