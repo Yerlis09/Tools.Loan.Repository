@@ -22,7 +22,7 @@ namespace Tools.Loan.DataAcces.Services
                 {
                     categoria = new Categoria
                     {
-                        Nombre = model.Nombre,
+                        Nombre = model.Nombre.Trim().ToUpper(),
                     };
                     con.Set<Categoria>().Add(categoria);
                 }
