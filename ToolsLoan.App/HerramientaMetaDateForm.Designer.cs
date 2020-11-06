@@ -1,6 +1,6 @@
 ﻿namespace ToolsLoan.App
 {
-    partial class Herramienta
+    partial class HerramientaMetaDateForm
     {
         /// <summary>
         /// Required designer variable.

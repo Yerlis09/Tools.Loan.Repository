@@ -11,10 +11,10 @@ using Tools.Loan.DataAcces.Services;
 
 namespace ToolsLoan.App
 {
-    public partial class Herramienta : Form
+    public partial class HerramientaMetaDateForm : Form
     {
         readonly HerramientaService _herramientaService = new HerramientaService();
-        public Herramienta()
+        public HerramientaMetaDateForm()
         {
             InitializeComponent();
         }

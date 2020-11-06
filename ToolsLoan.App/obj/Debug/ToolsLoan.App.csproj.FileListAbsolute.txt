@@ -73,8 +73,12 @@ C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\bin\Debug\Tools.Loan.Shared.dll
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\bin\Debug\Tools.Loan.Shared.pdb
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.Login.resources
-C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.Herramienta.resources
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.AdministradorForm.resources
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.Usuarios.resources
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.EncargadoForm.resources
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.HistorialForm.resources
+C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.CategoriaForm.resources
+C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.GestionarPrestamoForm.resources
+C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.HerramientaMetaDateForm.resources
+C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.HerramientasForm.resources
+C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.SalidaForm.resources

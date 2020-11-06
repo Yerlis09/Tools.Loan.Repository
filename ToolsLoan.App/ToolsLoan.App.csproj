@@ -148,11 +148,29 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Herramienta.cs">
+    <Compile Include="CategoriaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Herramienta.Designer.cs">
-      <DependentUpon>Herramienta.cs</DependentUpon>
+    <Compile Include="CategoriaForm.Designer.cs">
+      <DependentUpon>CategoriaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntradaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntradaForm.Designer.cs">
+      <DependentUpon>EntradaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionarPrestamoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionarPrestamoForm.Designer.cs">
+      <DependentUpon>GestionarPrestamoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HerramientaMetaDateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HerramientaMetaDateForm.Designer.cs">
+      <DependentUpon>HerramientaMetaDateForm.cs</DependentUpon>
     </Compile>
     <Compile Include="EncargadoForm.cs">
       <SubType>Form</SubType>
@@ -165,6 +183,12 @@
     </Compile>
     <Compile Include="Administrador.Designer.cs">
       <DependentUpon>Administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HerramientasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HerramientasForm.Designer.cs">
+      <DependentUpon>HerramientasForm.cs</DependentUpon>
     </Compile>
     <Compile Include="HistorialForm.cs">
       <SubType>Form</SubType>
@@ -180,6 +204,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalidaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalidaForm.Designer.cs">
+      <DependentUpon>SalidaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,11 +219,20 @@
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CategoriaForm.resx">
+      <DependentUpon>CategoriaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EncargadoForm.resx">
       <DependentUpon>EncargadoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Herramienta.resx">
-      <DependentUpon>Herramienta.cs</DependentUpon>
+    <EmbeddedResource Include="GestionarPrestamoForm.resx">
+      <DependentUpon>GestionarPrestamoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HerramientaMetaDateForm.resx">
+      <DependentUpon>HerramientaMetaDateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HerramientasForm.resx">
+      <DependentUpon>HerramientasForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HistorialForm.resx">
       <DependentUpon>HistorialForm.cs</DependentUpon>
@@ -211,6 +250,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SalidaForm.resx">
+      <DependentUpon>SalidaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </EmbeddedResource>

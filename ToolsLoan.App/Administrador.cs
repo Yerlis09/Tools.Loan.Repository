@@ -69,7 +69,7 @@ namespace ToolsLoan.App
 
         private void btnherra_Click(object sender, EventArgs e)
         {
-            abrirformhijo(new Herramienta());
+            abrirformhijo(new HerramientaMetaDateForm());
             pictureBox1.Visible = false;
             pictureBox2.Visible = false;
         }
