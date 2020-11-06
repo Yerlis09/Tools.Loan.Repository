@@ -62,7 +62,9 @@ namespace ToolsLoan.App
 
         private void btnUser_Click(object sender, EventArgs e)
         {
-
+            abrirformhijo(new Usuarios());
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = false;
         }
 
         private void btnherra_Click(object sender, EventArgs e)

@@ -77,3 +77,4 @@ C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.AdministradorForm.resources
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.Usuarios.resources
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.EncargadoForm.resources
+C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.HistorialForm.resources

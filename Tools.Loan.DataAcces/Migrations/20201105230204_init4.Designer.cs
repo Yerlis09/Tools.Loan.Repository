@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tools.Loan.DataAcces;
 
 namespace Tools.Loan.DataAcces.Migrations
 {
     [DbContext(typeof(AppContext))]
-    partial class AppContextModelSnapshot : ModelSnapshot
+    [Migration("20201105230204_init4")]
+    partial class init4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,10 +53,6 @@ namespace Tools.Loan.DataAcces.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Cliente");
-
-                    b.HasData(
-                        new { Id = 1, Address = "Solgat", Apellido = "wilimardo", Nombre = "Wili" }
-                    );
                 });
 
             modelBuilder.Entity("Tools.Loan.Domain.Herramienta", b =>
@@ -137,10 +135,6 @@ namespace Tools.Loan.DataAcces.Migrations
                     b.HasIndex("UsuarioId");
 
                     b.ToTable("Prestamo");
-
-                    b.HasData(
-                        new { Id = 1, ClienteId = 1, Descripción = "Presto un martillo ", FechaEntrada = new DateTime(2020, 11, 6, 0, 23, 28, 770, DateTimeKind.Utc), FechaSalida = new DateTime(2020, 11, 9, 0, 23, 28, 770, DateTimeKind.Utc), HerramientaId = 1, UsuarioId = 1 }
-                    );
                 });
 
             modelBuilder.Entity("Tools.Loan.Domain.Role", b =>

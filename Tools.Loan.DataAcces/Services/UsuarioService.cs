@@ -39,16 +39,91 @@ namespace Tools.Loan.DataAcces.Services
        
             using (var context = new AppContext())
             {
-                return await context.Set<Usuario>().FirstOrDefaultAsync(x => x.UserName == UserName);
+                return await context.Set<Usuario>().FirstOrDefaultAsync(x => x.UserName.Trim().ToLower().Equals(UserName.Trim().ToLower()));
             }
         }
+
+
+        public async Task<List<UserTableModel>> GetAllUserAsync()
+        {
+
+            using (var context = new AppContext())
+            {
+                return await context.Set<Usuario>().Select(x => new UserTableModel {Id = x.Id, Nombre = x.Nombre, Role = x.Role.RoleName, UserName = x.UserName }).ToListAsync();
+            }
+        }
+
 
         public async Task<List<Usuario>> GetUsersAsync(Expression<Func<Usuario, bool>> expression)
         {
 
             using (var context = new AppContext())
             {
-                return await context.Set<Usuario>().Where(expression).ToListAsync();
+                return await context.Set<Usuario>().Include(x=> x.Role).Where(expression).ToListAsync();
+            }
+        }
+
+        public async Task<bool> DoesRollExistsAsync(string roleName)
+        {
+
+            using (var context = new AppContext())
+            {
+                return await context.Set<Role>().AnyAsync(x=> x.RoleName.Trim().ToLower().Equals(roleName.ToLower().Trim()));
+            }
+        }
+
+
+        public async Task<Role> GetRoleByNameAsync(string roleName)
+        {
+
+            using (var context = new AppContext())
+            {
+                return await context.Set<Role>().FirstOrDefaultAsync(x => x.RoleName.Trim().ToLower().Equals(roleName.ToLower().Trim()));
+            }
+        }
+
+        public async Task<List<string>> GetAllRolesAsync()
+        {
+
+            using (var context = new AppContext())
+            {
+                return await context.Set<Role>().Select(x => x.RoleName).ToListAsync();
+            
+            }
+        }
+
+
+        public async Task CreateUser(UserModel model)
+        {
+            if(model.UserName.Trim().Length == 0)
+            {
+                throw new Exception("El nombre de usuario esta vacio");
+            }
+            else if(model.PassWord.Trim().Length == 0)
+            {
+                throw new Exception("la clave  del usuario esta vacioa");
+            }
+            else if(!(await DoesRollExistsAsync(model.Role)))
+            {
+                throw new Exception("El rol no existe");
+            }
+            var user =await  GetUserByUserNameAsync(model.UserName);
+            if(user != null)
+            {
+                throw new Exception("El usuario ya existe!");
+            }
+            var role = await GetRoleByNameAsync(model.Role);
+            using (var context = new AppContext())
+            {
+                user = new Usuario
+                {
+                    Nombre = model.Nombre.Trim().ToLower(),
+                    Password = model.PassWord,
+                    RoleId = role.Id,
+                    UserName = model.UserName.Trim().ToLower()
+                };
+                context.Add(user);
+                context.SaveChanges();
             }
         }
     }

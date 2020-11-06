@@ -46,7 +46,17 @@ namespace Tools.Loan.DataAcces
            
             modelBuilder.Entity<Usuario>().HasOne(x => x.Role).WithMany(x=> x.Usuarios).HasForeignKey(x=> x.RoleId);
             modelBuilder.Entity<Usuario>().HasIndex(x => x.UserName).IsUnique();
+            modelBuilder.Entity<Usuario>().Property(x => x.UserName).IsRequired();
             modelBuilder.Entity<Cliente>().HasKey(x => x.Id);
+            modelBuilder.Entity<Cliente>().HasData(new Cliente
+            {
+                Address = "Solgat",
+                Id = 1,
+                Apellido = "wilimardo",
+                Nombre = "Wili"
+
+            }); ;
+
             modelBuilder.Entity<Herramienta>().HasKey(x => x.Id);
             modelBuilder.Entity<Herramienta>().HasOne(x => x.HerramientaMetaData).WithMany(x=> x.Herramientas).HasForeignKey(x=> x.HerramientaMetaDataID);
             modelBuilder.Entity<Herramienta>().HasData(new Herramienta { Id = 1, Descripción = "N/A", HerramientaMetaDataID = 1 },
@@ -78,6 +88,16 @@ namespace Tools.Loan.DataAcces
             modelBuilder.Entity<Categoria>().HasMany(x => x.HerramientaMetaDatas).WithOne(x=> x.Categoria).HasForeignKey(x=> x.CategoriaId).IsRequired(false);
             modelBuilder.Entity<Categoria>().HasIndex(x => x.Nombre).IsUnique();
             modelBuilder.Entity<Prestamo>().HasKey(x => x.Id);
+            modelBuilder.Entity<Prestamo>().HasData(new Prestamo { 
+            Id = 1,
+            ClienteId = 1,
+            Descripción ="Presto un martillo ",
+            FechaEntrada = DateTime.UtcNow,
+                FechaSalida = DateTime.UtcNow.AddDays(3),
+               HerramientaId = 1,
+               UsuarioId = 1
+
+            });
             modelBuilder.Entity<Prestamo>().HasOne(x => x.Usuario).WithMany(x => x.Prestamos).HasForeignKey(x => x.UsuarioId);
             modelBuilder.Entity<Prestamo>().HasOne(x => x.Cliente).WithMany(x => x.Prestamos).HasForeignKey(x => x.ClienteId);
             modelBuilder.Entity<Prestamo>().HasOne(x => x.Herramienta).WithMany(x => x.Prestamos).HasForeignKey(x => x.HerramientaId);
