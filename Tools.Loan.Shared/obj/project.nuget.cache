@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "FpF0gBRBa34QG1KD9wcU7dJ/8u0xo6en0cMD8V5TXmQplol5vetxLk3iETgczwo1BfJsMmDf/bKy18f9A2qMYg==",
+  "dgSpecHash": "7UKq00nEh1hdHJxWrxpz91q639+uPyl9T/y+F2N3p1e/pvc8V8CJAZmtBGBAQ5/htieH5ddsILUMWCmiyvEcXw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Wilirambo\\Documents\\Tools.Loan.Repository\\Tools.Loan.Shared\\Tools.Loan.Shared.csproj",
+  "projectFilePath": "C:\\Users\\caste\\OneDrive\\Escritorio\\Proyecto\\Tools.Loan.Repository\\Tools.Loan.Shared\\Tools.Loan.Shared.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Wilirambo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\caste\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\caste\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

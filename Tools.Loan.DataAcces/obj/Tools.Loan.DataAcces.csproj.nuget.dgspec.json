@@ -1,26 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Wilirambo\\Documents\\Tools.Loan.Repository\\Tools.Loan.DataAcces\\Tools.Loan.DataAcces.csproj": {}
+    "C:\\Users\\caste\\OneDrive\\Escritorio\\Proyecto\\Tools.Loan.Repository\\Tools.Loan.DataAcces\\Tools.Loan.DataAcces.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Wilirambo\\Documents\\Tools.Loan.Repository\\Tools.Loan.DataAcces\\Tools.Loan.DataAcces.csproj": {
+    "C:\\Users\\caste\\OneDrive\\Escritorio\\Proyecto\\Tools.Loan.Repository\\Tools.Loan.DataAcces\\Tools.Loan.DataAcces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Wilirambo\\Documents\\Tools.Loan.Repository\\Tools.Loan.DataAcces\\Tools.Loan.DataAcces.csproj",
+        "projectUniqueName": "C:\\Users\\caste\\OneDrive\\Escritorio\\Proyecto\\Tools.Loan.Repository\\Tools.Loan.DataAcces\\Tools.Loan.DataAcces.csproj",
         "projectName": "Tools.Loan.DataAcces",
-        "projectPath": "C:\\Users\\Wilirambo\\Documents\\Tools.Loan.Repository\\Tools.Loan.DataAcces\\Tools.Loan.DataAcces.csproj",
-        "packagesPath": "C:\\Users\\Wilirambo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Wilirambo\\Documents\\Tools.Loan.Repository\\Tools.Loan.DataAcces\\obj\\",
+        "projectPath": "C:\\Users\\caste\\OneDrive\\Escritorio\\Proyecto\\Tools.Loan.Repository\\Tools.Loan.DataAcces\\Tools.Loan.DataAcces.csproj",
+        "packagesPath": "C:\\Users\\caste\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\caste\\OneDrive\\Escritorio\\Proyecto\\Tools.Loan.Repository\\Tools.Loan.DataAcces\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Wilirambo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\caste\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -32,11 +27,11 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\Wilirambo\\Documents\\Tools.Loan.Repository\\Tools.Loan.Domain\\Tools.Loan.Domain.csproj": {
-                "projectPath": "C:\\Users\\Wilirambo\\Documents\\Tools.Loan.Repository\\Tools.Loan.Domain\\Tools.Loan.Domain.csproj"
+              "C:\\Users\\caste\\OneDrive\\Escritorio\\Proyecto\\Tools.Loan.Repository\\Tools.Loan.Domain\\Tools.Loan.Domain.csproj": {
+                "projectPath": "C:\\Users\\caste\\OneDrive\\Escritorio\\Proyecto\\Tools.Loan.Repository\\Tools.Loan.Domain\\Tools.Loan.Domain.csproj"
               },
-              "C:\\Users\\Wilirambo\\Documents\\Tools.Loan.Repository\\Tools.Loan.Shared\\Tools.Loan.Shared.csproj": {
-                "projectPath": "C:\\Users\\Wilirambo\\Documents\\Tools.Loan.Repository\\Tools.Loan.Shared\\Tools.Loan.Shared.csproj"
+              "C:\\Users\\caste\\OneDrive\\Escritorio\\Proyecto\\Tools.Loan.Repository\\Tools.Loan.Shared\\Tools.Loan.Shared.csproj": {
+                "projectPath": "C:\\Users\\caste\\OneDrive\\Escritorio\\Proyecto\\Tools.Loan.Repository\\Tools.Loan.Shared\\Tools.Loan.Shared.csproj"
               }
             }
           }
@@ -81,27 +76,22 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Wilirambo\\Documents\\Tools.Loan.Repository\\Tools.Loan.Domain\\Tools.Loan.Domain.csproj": {
+    "C:\\Users\\caste\\OneDrive\\Escritorio\\Proyecto\\Tools.Loan.Repository\\Tools.Loan.Domain\\Tools.Loan.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Wilirambo\\Documents\\Tools.Loan.Repository\\Tools.Loan.Domain\\Tools.Loan.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\caste\\OneDrive\\Escritorio\\Proyecto\\Tools.Loan.Repository\\Tools.Loan.Domain\\Tools.Loan.Domain.csproj",
         "projectName": "Tools.Loan.Domain",
-        "projectPath": "C:\\Users\\Wilirambo\\Documents\\Tools.Loan.Repository\\Tools.Loan.Domain\\Tools.Loan.Domain.csproj",
-        "packagesPath": "C:\\Users\\Wilirambo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Wilirambo\\Documents\\Tools.Loan.Repository\\Tools.Loan.Domain\\obj\\",
+        "projectPath": "C:\\Users\\caste\\OneDrive\\Escritorio\\Proyecto\\Tools.Loan.Repository\\Tools.Loan.Domain\\Tools.Loan.Domain.csproj",
+        "packagesPath": "C:\\Users\\caste\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\caste\\OneDrive\\Escritorio\\Proyecto\\Tools.Loan.Repository\\Tools.Loan.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Wilirambo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\caste\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -145,27 +135,22 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Wilirambo\\Documents\\Tools.Loan.Repository\\Tools.Loan.Shared\\Tools.Loan.Shared.csproj": {
+    "C:\\Users\\caste\\OneDrive\\Escritorio\\Proyecto\\Tools.Loan.Repository\\Tools.Loan.Shared\\Tools.Loan.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Wilirambo\\Documents\\Tools.Loan.Repository\\Tools.Loan.Shared\\Tools.Loan.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\caste\\OneDrive\\Escritorio\\Proyecto\\Tools.Loan.Repository\\Tools.Loan.Shared\\Tools.Loan.Shared.csproj",
         "projectName": "Tools.Loan.Shared",
-        "projectPath": "C:\\Users\\Wilirambo\\Documents\\Tools.Loan.Repository\\Tools.Loan.Shared\\Tools.Loan.Shared.csproj",
-        "packagesPath": "C:\\Users\\Wilirambo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Wilirambo\\Documents\\Tools.Loan.Repository\\Tools.Loan.Shared\\obj\\",
+        "projectPath": "C:\\Users\\caste\\OneDrive\\Escritorio\\Proyecto\\Tools.Loan.Repository\\Tools.Loan.Shared\\Tools.Loan.Shared.csproj",
+        "packagesPath": "C:\\Users\\caste\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\caste\\OneDrive\\Escritorio\\Proyecto\\Tools.Loan.Repository\\Tools.Loan.Shared\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Wilirambo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\caste\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -205,7 +190,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

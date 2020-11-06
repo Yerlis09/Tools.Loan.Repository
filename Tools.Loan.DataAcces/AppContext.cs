@@ -40,7 +40,7 @@ namespace Tools.Loan.DataAcces
            );
             modelBuilder.Entity<Role>().HasIndex(x => x.RoleName).IsUnique();
 
-            modelBuilder.Entity<Usuario>().HasKey(x => x.Id);
+            modelBuilder.Entity<Usuario>().HasKey(usuario => usuario.Id);
             // esto es para llenar la base que datos sin necidad de yo hacerlo manuelamente al crearla 
             modelBuilder.Entity<Usuario>().HasData(new Usuario { Id = 1, Nombre = "Admin", Password = "123", UserName = "Admin", RoleId = 1 });
            

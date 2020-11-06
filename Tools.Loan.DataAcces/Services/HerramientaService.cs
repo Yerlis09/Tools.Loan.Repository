@@ -54,6 +54,16 @@ namespace Tools.Loan.DataAcces.Services
         }
 
 
+        public async Task<Herramienta> GetHerramientaByIdAsync(int id )
+        {
+            using (AppContext con = new AppContext())
+            {
+             
+                return await con.Set<Herramienta>().FirstOrDefaultAsync(herramienta => herramienta.Id.Equals(id));
+            }
+        }
+
+
         // aqui tienes un ejemeplo
 
         public async Task<List<HerramientTableModel>> GetHerramientaTableAsync()
@@ -104,7 +114,24 @@ namespace Tools.Loan.DataAcces.Services
             }
         }
 
+        public async Task ActualizarHerramientaAsync(HerramientaModel model)
+        {
+            var herramienta = await GetHerramientaByIdAsync(model.Id);
+            if(herramienta == null)
+            {
+                throw new Exception("La herrameinta no existe");
+            }
 
+            using (var con = new AppContext())
+            {
+                herramienta.Puesto = model.Puesto;
+                herramienta.Descripción = model.Descripción;
+                con.Update(herramienta);
+                
+                await con.SaveChangesAsync();
+            }
+            
+        }
 
         public async Task PrestarHerramientaAsync(CrearHerrramintaModel model)
         {
