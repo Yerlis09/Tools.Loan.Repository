@@ -13,6 +13,8 @@ namespace Tools.Loan.Domain
         public string Descripción { get; set; }
         public DateTime FechaEntrada { get; set; }
         public DateTime FechaSalida { get; set; }
+
+        public DateTime? HerramientaDevultaFecha { get; set; }
         public Herramienta Herramienta { get; set; }
         public int HerramientaId { get; set; }
 

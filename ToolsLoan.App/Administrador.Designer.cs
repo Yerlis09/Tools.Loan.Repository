@@ -154,6 +154,7 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "Gestionar Prestamos";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnherra
             // 
@@ -221,7 +222,7 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // Administrador
+            // AdministradorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -230,7 +231,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Administrador";
+            this.Name = "AdministradorForm";
             this.Text = "Herramienta";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Restaurar)).EndInit();

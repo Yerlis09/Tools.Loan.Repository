@@ -15,53 +15,115 @@ namespace ToolsLoan.App
     public partial class HerramientaMetaDateForm : Form
     {
         readonly HerramientaService _herramientaService = new HerramientaService();
+      
         public HerramientaMetaDateForm()
         {
             InitializeComponent();
         }
 
-        private async  void Herramienta_Load(object sender, EventArgs e)
+        private async void Herramienta_Load(object sender, EventArgs e)
         {
             await LoadData();
         }
         public async Task LoadData()
         {
-            dataGridView2.DataSource =await  _herramientaService.GetHerramientaTableAsync();
+            dataGridView2.DataSource = await _herramientaService.GetHerramientaTableAsync();
             CategoriacomboBox.Items.AddRange((await _herramientaService.GetAllCategoriesAsync()).ToArray());
         }
         // mira si pudes arglar esto 
         private async void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            var dt = (DataGridView)sender;
-            if (dt.SelectedRows.Count > 0)
-            {
-                var value = Convert.ToInt32(dt.SelectedRows[0].Cells["Id"].Value);
-                var historial = await _herramientaService.GetHerramientaHistoryAsync(value);
-              
-                  
-                    groupBox1.Controls.Clear();
+            // cambiemos esto 
 
-                    groupBox1.Controls.Add(new PanelHermaienta(this.dataGridView2,value, _herramientaService, historial));
-               
-            }
-         
-            
+
+
         }
 
         private async void btnguardar_Click(object sender, EventArgs e)
         {
-            btnguardar.Enabled = false; 
+            btnguardar.Enabled = false;
 
-           await _herramientaService.CrearHerramientasAsync(new CrearHerrramintaModel {
-                   Categoria = (string)CategoriacomboBox.SelectedItem,
-                   Marca = marcaTxtBox.Text,
-                   Nombre = herramientaTxt.Text, 
-                   Serial = serialTxt.Text,
-                   Stock = (int)stock_numericUpDown.Value,
-           });
+            await _herramientaService.CrearHerramientasAsync(new CrearHerrramintaModel
+            {
+                Categoria = (string)CategoriacomboBox.SelectedItem,
+                Marca = marcaTxtBox.Text,
+                Nombre = herramientaTxt.Text,
+                Serial = serialTxt.Text,
+                Stock = (int)stock_numericUpDown.Value,
+            });
             await LoadData();
             btnguardar.Enabled = true;
+
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void btnactua_Click(object sender, EventArgs e)
+        {
+            btnactua.Enabled = false;
+            var dt = dataGridView2;
+            if (dt.SelectedRows.Count > 0)
+            {
+                var value = Convert.ToInt32(dt.SelectedRows[0].Cells["Id"].Value);
+                //var historial = await _herramientaService.GetHerramientaHistoryAsync(value);
+                new HerramientasForm(value).ShowDialog();
+                await LoadData();
+            }
+            else
+            {
+                MessageBox.Show("Tiene que selcionar una herramienta");
+
+            }
+            btnactua.Enabled = true;
+        }
+
+        private async void btnHistorial_Click(object sender, EventArgs e)
+        {
+            btnHistorial.Enabled = false;
+            var dt = dataGridView2;
+            if (dt.SelectedRows.Count > 0)
+            {
+                var value = Convert.ToInt32(dt.SelectedRows[0].Cells["Id"].Value);
+                var historial = await _herramientaService.GetHerramientaHistoryAsync(value);
+                new HistorialForm(historial).ShowDialog();
+                await LoadData();
+            }
+            else
+            {
+                MessageBox.Show("Tiene que selcionar una herramienta");
+
+            }
+            btnHistorial.Enabled = true;
+        }
+
+        private async void btneli_Click(object sender, EventArgs e)
+        {
+            btneli.Enabled = false;
+
+            var dt = dataGridView2;
+            if (dt.SelectedRows.Count > 0)
+            {
+                var value = Convert.ToInt32(dt.SelectedRows[0].Cells["Id"].Value);
+                DialogResult dialogResult = MessageBox.Show("Herramienta ID :" + value, "Estas seguro de querer borrar ?", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+
+                    await _herramientaService.BorrarHerramientaAsync(value);
+                    await LoadData();
+                }
+               
+            }
+            else
+            {
+                MessageBox.Show("Tiene que selcionar una herramienta");
+
+            }
+
+            btneli.Enabled = true;
 
         }
     }

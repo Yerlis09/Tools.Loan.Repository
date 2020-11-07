@@ -19,6 +19,8 @@ namespace ToolsLoan.App
         {
             _herramientaHistories = herramientaHistoryModels;
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            this.StartPosition = FormStartPosition.CenterParent;
         }
 
         private async void HistorialForm_Load(object sender, EventArgs e)

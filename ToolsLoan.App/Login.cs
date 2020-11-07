@@ -30,12 +30,15 @@ namespace ToolsLoan.App
            
             if (result != null && result.Role == "Admin")
             {
+                Program.User = result;
                 AdministradorForm admin = new AdministradorForm();
                 admin.Show();
                 this.Hide();
+              
             }
             else if(result != null && result.Role== "Encargado")
             {
+                Program.User = result;
                 EncargadoForm encar = new EncargadoForm();
                 encar.Show();
                 this.Hide();

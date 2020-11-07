@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tools.Loan.DataAcces;
 
 namespace Tools.Loan.DataAcces.Migrations
 {
     [DbContext(typeof(AppContext))]
-    partial class AppContextModelSnapshot : ModelSnapshot
+    [Migration("20201106195101_init27")]
+    partial class init27
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -130,8 +132,6 @@ namespace Tools.Loan.DataAcces.Migrations
 
                     b.Property<DateTime>("FechaSalida");
 
-                    b.Property<DateTime?>("HerramientaDevultaFecha");
-
                     b.Property<int>("HerramientaId");
 
                     b.Property<int>("UsuarioId");
@@ -147,7 +147,7 @@ namespace Tools.Loan.DataAcces.Migrations
                     b.ToTable("Prestamo");
 
                     b.HasData(
-                        new { Id = 1, ClienteId = 1, Descripción = "Presto un martillo ", FechaEntrada = new DateTime(2020, 11, 7, 0, 4, 54, 781, DateTimeKind.Utc), FechaSalida = new DateTime(2020, 11, 10, 0, 4, 54, 781, DateTimeKind.Utc), HerramientaId = 1, UsuarioId = 1 }
+                        new { Id = 1, ClienteId = 1, Descripción = "Presto un martillo ", FechaEntrada = new DateTime(2020, 11, 6, 19, 50, 58, 581, DateTimeKind.Utc), FechaSalida = new DateTime(2020, 11, 9, 19, 50, 58, 581, DateTimeKind.Utc), HerramientaId = 1, UsuarioId = 1 }
                     );
                 });
 

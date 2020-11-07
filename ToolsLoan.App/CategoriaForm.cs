@@ -16,5 +16,10 @@ namespace ToolsLoan.App
         {
             InitializeComponent();
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

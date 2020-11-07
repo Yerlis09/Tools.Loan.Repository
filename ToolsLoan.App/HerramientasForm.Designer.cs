@@ -30,19 +30,20 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.PanelHerramienta = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtnombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtuser = new System.Windows.Forms.TextBox();
+            this.txtubicacion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtcontra = new System.Windows.Forms.TextBox();
+            this.txtdescription = new System.Windows.Forms.TextBox();
             this.btnguardar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.PanelHerramienta.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -51,35 +52,16 @@
             // 
             // PanelHerramienta
             // 
-            this.PanelHerramienta.Controls.Add(this.label3);
-            this.PanelHerramienta.Controls.Add(this.txtnombre);
             this.PanelHerramienta.Controls.Add(this.label2);
-            this.PanelHerramienta.Controls.Add(this.txtuser);
+            this.PanelHerramienta.Controls.Add(this.txtubicacion);
             this.PanelHerramienta.Controls.Add(this.label1);
-            this.PanelHerramienta.Controls.Add(this.txtcontra);
+            this.PanelHerramienta.Controls.Add(this.txtdescription);
             this.PanelHerramienta.Controls.Add(this.btnguardar);
             this.PanelHerramienta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelHerramienta.Location = new System.Drawing.Point(0, 75);
             this.PanelHerramienta.Name = "PanelHerramienta";
             this.PanelHerramienta.Size = new System.Drawing.Size(332, 216);
             this.PanelHerramienta.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(60, 95);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 18);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Estado";
-            // 
-            // txtnombre
-            // 
-            this.txtnombre.Location = new System.Drawing.Point(126, 93);
-            this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(179, 20);
-            this.txtnombre.TabIndex = 22;
             // 
             // label2
             // 
@@ -91,12 +73,12 @@
             this.label2.TabIndex = 25;
             this.label2.Text = "Descripcion";
             // 
-            // txtuser
+            // txtubicacion
             // 
-            this.txtuser.Location = new System.Drawing.Point(126, 36);
-            this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(179, 20);
-            this.txtuser.TabIndex = 20;
+            this.txtubicacion.Location = new System.Drawing.Point(126, 36);
+            this.txtubicacion.Name = "txtubicacion";
+            this.txtubicacion.Size = new System.Drawing.Size(179, 20);
+            this.txtubicacion.TabIndex = 20;
             // 
             // label1
             // 
@@ -108,12 +90,12 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Ubicacion";
             // 
-            // txtcontra
+            // txtdescription
             // 
-            this.txtcontra.Location = new System.Drawing.Point(126, 64);
-            this.txtcontra.Name = "txtcontra";
-            this.txtcontra.Size = new System.Drawing.Size(179, 20);
-            this.txtcontra.TabIndex = 21;
+            this.txtdescription.Location = new System.Drawing.Point(126, 64);
+            this.txtdescription.Name = "txtdescription";
+            this.txtdescription.Size = new System.Drawing.Size(179, 20);
+            this.txtdescription.TabIndex = 21;
             // 
             // btnguardar
             // 
@@ -129,6 +111,16 @@
             this.btnguardar.TabIndex = 23;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = false;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(13, 41);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.TabIndex = 0;
             // 
             // HerramientasForm
             // 
@@ -141,6 +133,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HerramientasForm";
             this.Text = "HerramientasForm";
+            this.Load += new System.EventHandler(this.HerramientasForm_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.PanelHerramienta.ResumeLayout(false);
             this.PanelHerramienta.PerformLayout();
             this.ResumeLayout(false);
@@ -151,12 +146,11 @@
 
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Panel PanelHerramienta;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtuser;
+        private System.Windows.Forms.TextBox txtubicacion;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtcontra;
+        private System.Windows.Forms.TextBox txtdescription;
         private System.Windows.Forms.Button btnguardar;
+        private System.Windows.Forms.Label label3;
     }
 }

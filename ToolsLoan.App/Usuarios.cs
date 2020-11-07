@@ -60,6 +60,18 @@ namespace ToolsLoan.App
 
         private async void txtBuscar_TextChanged(object sender, EventArgs e) {
 
+
+
+        }
+
+        private void txtBuscar_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
