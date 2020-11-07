@@ -22,8 +22,8 @@ namespace ToolsLoan.App
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                //Application.Run(new Login());
-                Application.Run(new GestionarPrestamoForm());
+               Application.Run(new Login());
+               // Application.Run(new GestionarPrestamoForm());
             }
             catch(Exception e)
             {

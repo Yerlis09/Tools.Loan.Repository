@@ -228,24 +228,24 @@ namespace Tools.Loan.DataAcces.Services
                           join u in UsuarioQuery on q.UsuarioId equals u.Id
                           where h.Rentada != null
                           select
-  new HerramientasPrestadasTableModel
-  {
-      Address = c.Address,
-      Apellido = c.Apellido,
-      HerramientaId = h.Id,
-      HerramintasPorNombre = h.HerramientaMetaData.Nombre,
-      Identificacion = c.Identificacion,
-      Nombre = c.Nombre,
-      TotalDeherrametas = herramientasQuery.Where(x => x.Prestamos.Any(y => y.ClienteId == c.Id)).Count(),
-      UsuariosQueGestionaron = u.Nombre,
-      RentaRetrasada = (q.FechaSalida - DateTime.Now).TotalDays > -1 ? string.Format("Le quedan  {0} Dias para entregar", (int)(q.FechaSalida - DateTime.Now).TotalDays) : "La Entrega esta retrasada",
-      FechaEntrada = q.FechaEntrada.ToString(),
-      FechaSalida = q.FechaSalida.ToString(),
-      ClienteId = c.Id.ToString(),
-      PrestamoId = q.Id.ToString()
+                          new HerramientasPrestadasTableModel
+                          {
+                              Address = c.Address,
+                              Apellido = c.Apellido,
+                              HerramientaId = h.Id,
+                              HerramintasPorNombre = h.HerramientaMetaData.Nombre,
+                              Identificacion = c.Identificacion,
+                              Nombre = c.Nombre,
+                              TotalDeherrametas = herramientasQuery.Where(x => x.Prestamos.Any(y => y.ClienteId == c.Id)).Count(),
+                              UsuariosQueGestionaron = u.Nombre,
+                              RentaRetrasada = (q.FechaSalida - DateTime.Now).TotalDays > -1 ? string.Format("Le quedan  {0} Dias para entregar", (int)(q.FechaSalida - DateTime.Now).TotalDays) : "La Entrega esta retrasada",
+                              FechaEntrada = q.FechaEntrada.ToString(),
+                              FechaSalida = q.FechaSalida.ToString(),
+                              ClienteId = c.Id.ToString(),
+                              PrestamoId = q.Id.ToString()
 
-  }
-                          );
+                          }
+                                                  );
 
                 return await rs.ToListAsync();
 
