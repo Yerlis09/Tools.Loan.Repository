@@ -53,7 +53,7 @@ namespace Tools.Loan.DataAcces
 
             modelBuilder.Entity<Cliente>().HasData(new Cliente
             {
-                Address = "Solgat",
+                Cargo = "Solgat",
                 Id = 1,
                 Apellido = "wilimardo",
                 Nombre = "Wili",

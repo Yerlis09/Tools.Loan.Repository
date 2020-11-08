@@ -31,17 +31,17 @@ namespace ToolsLoan.App
         }
        async Task LoadData()
         {
-            comboBox1.Items.AddRange((await _clienteService.Indentificaciones()).ToArray());
+            cmbnombre.Items.AddRange((await _clienteService.Indentificaciones()).ToArray());
             dataGridView1.DataSource = await _herramientaService.HerramientasDisponiblesAsync();
         }
 
         private async void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-            cliente = await _clienteService.LerrClientePorIndentificacio((string)comboBox1.SelectedItem);
+            cliente = await _clienteService.LerrClientePorIndentificacio((string)cmbnombre.SelectedItem);
             texNombreC.Text = cliente?.Nombre;
             texApellido.Text = cliente?.Apellido;
-            
+          
 
         }
        
@@ -121,5 +121,14 @@ namespace ToolsLoan.App
             }
             button1.Enabled = true;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            RegistrarClienteForm client = new RegistrarClienteForm();
+            client.Show();
+
+
+        }
     }
+    
 }

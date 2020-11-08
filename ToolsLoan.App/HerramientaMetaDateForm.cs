@@ -31,7 +31,7 @@ namespace ToolsLoan.App
             CategoriacomboBox.Items.AddRange((await _herramientaService.GetAllCategoriesAsync()).ToArray());
         }
         // mira si pudes arglar esto 
-        private async void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        private  void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
             // cambiemos esto 

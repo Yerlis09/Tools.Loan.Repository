@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tools.Loan.DataAcces;
 
 namespace Tools.Loan.DataAcces.Migrations
 {
     [DbContext(typeof(AppContext))]
-    partial class AppContextModelSnapshot : ModelSnapshot
+    [Migration("20201107175144_CambiosAndres")]
+    partial class CambiosAndres
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -147,7 +149,7 @@ namespace Tools.Loan.DataAcces.Migrations
                     b.ToTable("Prestamo");
 
                     b.HasData(
-                        new { Id = 1, ClienteId = 1, Descripción = "Presto un martillo ", FechaEntrada = new DateTime(2020, 11, 7, 22, 40, 55, 915, DateTimeKind.Utc), FechaSalida = new DateTime(2020, 11, 10, 22, 40, 55, 915, DateTimeKind.Utc), HerramientaId = 1, UsuarioId = 1 }
+                        new { Id = 1, ClienteId = 1, Descripción = "Presto un martillo ", FechaEntrada = new DateTime(2020, 11, 7, 17, 51, 41, 412, DateTimeKind.Utc), FechaSalida = new DateTime(2020, 11, 10, 17, 51, 41, 412, DateTimeKind.Utc), HerramientaId = 1, UsuarioId = 1 }
                     );
                 });
 

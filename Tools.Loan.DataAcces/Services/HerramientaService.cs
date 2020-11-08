@@ -230,7 +230,7 @@ namespace Tools.Loan.DataAcces.Services
                           select
                           new HerramientasPrestadasTableModel
                           {
-                              Address = c.Address,
+                              Address = c.Cargo,
                               Apellido = c.Apellido,
                               HerramientaId = h.Id,
                               HerramintasPorNombre = h.HerramientaMetaData.Nombre,

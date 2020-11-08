@@ -23,7 +23,7 @@ namespace ToolsLoan.App
             this.StartPosition = FormStartPosition.CenterParent;
         }
 
-        private async void HistorialForm_Load(object sender, EventArgs e)
+        private void HistorialForm_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = _herramientaHistories;
         }

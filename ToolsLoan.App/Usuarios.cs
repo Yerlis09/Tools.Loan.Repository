@@ -58,7 +58,7 @@ namespace ToolsLoan.App
             btnguardar.Enabled = true;
         }
 
-        private async void txtBuscar_TextChanged(object sender, EventArgs e) {
+        private  void txtBuscar_TextChanged(object sender, EventArgs e) {
 
 
 

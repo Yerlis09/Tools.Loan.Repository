@@ -18,7 +18,7 @@ namespace Tools.Loan.Domain
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-        public string Address { get; set; }
+        public string Cargo { get; set; }
         [Required]
         public string Identificacion { get; set; }
         public ICollection<Prestamo> Prestamos { get; set; }
