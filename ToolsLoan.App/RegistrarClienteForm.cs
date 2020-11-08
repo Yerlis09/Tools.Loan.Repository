@@ -11,11 +11,13 @@ using Tools.Loan.DataAcces.Services;
 using Tools.Loan.Domain;
 using Tools.Loan.Shared;
 
+
 namespace ToolsLoan.App
 {
     public partial class RegistrarClienteForm : Form
     {
         readonly ClienteService _clienteService = new ClienteService();
+        EntradaForm frm = new EntradaForm();
         public RegistrarClienteForm()
         {
             InitializeComponent();
@@ -27,10 +29,18 @@ namespace ToolsLoan.App
             try
             {
                 btnguardar.Enabled = false;
+                if(textBox1.Text.Trim().Length < 1) 
+                {
+
+                    MessageBox.Show("Tienes que llenar el numero de cedula");
+                    btnguardar.Enabled = true;
+                    return;
+
+                }
                 await _clienteService.CrearClienteAsync(new CrearClienteModel
                 {
 
-                     Identificacion = Convert.ToInt32(textBox1.Text),
+                     Identificacion = textBox1.Text,
                      Nombre= this.texNombreC.Text,
                      Apellido = this.texApellido.Text,
                      Cargo = this.texCargo.Text,
@@ -57,6 +67,14 @@ namespace ToolsLoan.App
             var result = await _clienteService.GetAllClientAsync();
             dataGridView1.DataSource = result;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frm.Show();
+            this.Close();
+            
+        }
+       
     }
     
 }

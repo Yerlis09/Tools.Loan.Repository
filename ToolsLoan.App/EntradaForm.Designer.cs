@@ -414,7 +414,6 @@
         public System.Windows.Forms.TextBox texApellido;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox texNombreC;
-        private System.Windows.Forms.ComboBox cmbnombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label8;
@@ -425,5 +424,6 @@
         public System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnRegistra;
+        public System.Windows.Forms.ComboBox cmbnombre;
     }
 }

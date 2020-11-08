@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,11 +21,10 @@ namespace Tools.Loan.DataAcces.Services
             }
         }
 
-        public async Task<Cliente> LerrClientePorIndentificacio(string identityficacion)
-        {
+        public async Task<Cliente> LerrClientePorIndentificacion(string identityficacion)
+        {        
             using (AppContext con = new AppContext())
             {
-
                 return await con.Set<Cliente>().Where(x => x.Identificacion.Equals(identityficacion)).FirstOrDefaultAsync();
             }
         }
@@ -32,13 +32,12 @@ namespace Tools.Loan.DataAcces.Services
         public async Task CrearClienteAsync(CrearClienteModel model)
         {
 
-
-            /*if (Identificacion!=model)
+            var cliente = await LerrClientePorIndentificacion(model.Identificacion);
+            if(cliente != null )
             {
-                throw new Exception("El usuario ya existe");
+                throw new Exception("Estenumero de cedula ya existe !");
 
-            }*/
-
+            }
             if (model == null)
             {
                 throw new Exception("esta vacio");
@@ -51,7 +50,7 @@ namespace Tools.Loan.DataAcces.Services
                     Nombre = model.Nombre,
                     Apellido = model.Apellido,
                     Cargo = model.Cargo,
-                    Identificacion = model.Identificacion.ToString(),
+                    Identificacion = model.Identificacion
 
 
                 };
@@ -63,7 +62,7 @@ namespace Tools.Loan.DataAcces.Services
             }
         }
     
-        public async Task<bool> ExisteCliente(string id)
+        public async Task<bool> ExisteCliente(string id ,string  identi)
         {
             if (!int.TryParse(id, out var clientId))
             {

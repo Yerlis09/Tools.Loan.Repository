@@ -46,6 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -55,6 +56,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -104,12 +106,13 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(115)))), ((int)(((byte)(35)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(26, 391);
+            this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 31);
             this.button1.TabIndex = 44;
-            this.button1.Text = "Nuevo";
+            this.button1.Text = "regresar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btneli
             // 
@@ -117,9 +120,9 @@
             this.btneli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(115)))), ((int)(((byte)(35)))));
             this.btneli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btneli.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneli.Location = new System.Drawing.Point(243, 391);
+            this.btneli.Location = new System.Drawing.Point(222, 383);
             this.btneli.Name = "btneli";
-            this.btneli.Size = new System.Drawing.Size(80, 31);
+            this.btneli.Size = new System.Drawing.Size(101, 31);
             this.btneli.TabIndex = 43;
             this.btneli.Text = "Eliminar";
             this.btneli.UseVisualStyleBackColor = false;
@@ -130,7 +133,7 @@
             this.btnactua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(115)))), ((int)(((byte)(35)))));
             this.btnactua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnactua.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnactua.Location = new System.Drawing.Point(128, 391);
+            this.btnactua.Location = new System.Drawing.Point(26, 383);
             this.btnactua.Name = "btnactua";
             this.btnactua.Size = new System.Drawing.Size(103, 31);
             this.btnactua.TabIndex = 42;
@@ -250,16 +253,16 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(659, 453);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btneli);
             this.Controls.Add(this.btnactua);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegistrarClienteForm";
             this.Text = "RegistrarClienteForm";
             this.Load += new System.EventHandler(this.RegistrarClienteForm_Load);
+            this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

@@ -38,7 +38,7 @@ namespace ToolsLoan.App
         private async void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-            cliente = await _clienteService.LerrClientePorIndentificacio((string)cmbnombre.SelectedItem);
+            cliente = await _clienteService.LerrClientePorIndentificacion((string)cmbnombre.SelectedItem);
             texNombreC.Text = cliente?.Nombre;
             texApellido.Text = cliente?.Apellido;
           
@@ -127,6 +127,11 @@ namespace ToolsLoan.App
             RegistrarClienteForm client = new RegistrarClienteForm();
             client.Show();
 
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
 
         }
     }
