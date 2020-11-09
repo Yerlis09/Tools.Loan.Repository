@@ -14,13 +14,13 @@ namespace Tools.Loan.DataAcces.Services
     public class UsuarioService
     {
         // valida el login pero metele mas logica para validar los strings que dentren 
-        public async  Task<LoginSuccessModel> LoginAsync(string UserName ,string Password)
+        public async Task<LoginSuccessModel> LoginAsync(string UserName, string Password)
         {
             // te dejo esta capa para otro dia IRepository<Usuario> repository =  new BaseRepository<Usuario>(new AppContext()
             using (var context = new AppContext())
             {
-                var result =await context.Set<Usuario>().Include(x=> x.Role)
-                    .Where(x => x.UserName.ToLower().Equals(UserName.Trim().ToLower()) && x.Password.Equals(Password)).Select(x=> new LoginSuccessModel { UserName = x.UserName, Role = x.Role.RoleName, UserId = x.Id}).FirstOrDefaultAsync();
+                var result = await context.Set<Usuario>().Include(x => x.Role)
+                    .Where(x => x.UserName.ToLower().Equals(UserName.Trim().ToLower()) && x.Password.Equals(Password)).Select(x => new LoginSuccessModel { UserName = x.UserName, Role = x.Role.RoleName, UserId = x.Id }).FirstOrDefaultAsync();
                 return result;
             }
         }
@@ -28,7 +28,7 @@ namespace Tools.Loan.DataAcces.Services
         {
             if (!int.TryParse(id, out var userId))
                 return null;
-            
+
             using (var context = new AppContext())
             {
                 return await context.Set<Usuario>().FirstOrDefaultAsync(x => x.Id == userId);
@@ -36,7 +36,7 @@ namespace Tools.Loan.DataAcces.Services
         }
         public async Task<Usuario> GetUserByUserNameAsync(string UserName)
         {
-       
+
             using (var context = new AppContext())
             {
                 return await context.Set<Usuario>().FirstOrDefaultAsync(x => x.UserName.Trim().ToLower().Equals(UserName.Trim().ToLower()));
@@ -49,7 +49,7 @@ namespace Tools.Loan.DataAcces.Services
 
             using (var context = new AppContext())
             {
-                return await context.Set<Usuario>().Select(x => new UserTableModel {Id = x.Id, Nombre = x.Nombre, Role = x.Role.RoleName, UserName = x.UserName }).ToListAsync();
+                return await context.Set<Usuario>().Select(x => new UserTableModel { Id = x.Id, Nombre = x.Nombre, Role = x.Role.RoleName, UserName = x.UserName }).ToListAsync();
             }
         }
 
@@ -59,7 +59,7 @@ namespace Tools.Loan.DataAcces.Services
 
             using (var context = new AppContext())
             {
-                return await context.Set<Usuario>().Include(x=> x.Role).Where(expression).ToListAsync();
+                return await context.Set<Usuario>().Include(x => x.Role).Where(expression).ToListAsync();
             }
         }
 
@@ -68,7 +68,7 @@ namespace Tools.Loan.DataAcces.Services
 
             using (var context = new AppContext())
             {
-                return await context.Set<Role>().AnyAsync(x=> x.RoleName.Trim().ToLower().Equals(roleName.ToLower().Trim()));
+                return await context.Set<Role>().AnyAsync(x => x.RoleName.Trim().ToLower().Equals(roleName.ToLower().Trim()));
             }
         }
 
@@ -88,27 +88,27 @@ namespace Tools.Loan.DataAcces.Services
             using (var context = new AppContext())
             {
                 return await context.Set<Role>().Select(x => x.RoleName).ToListAsync();
-            
+
             }
         }
 
 
         public async Task CreateUser(UserModel model)
         {
-            if(model.UserName.Trim().Length == 0)
+            if (model.UserName.Trim().Length == 0)
             {
                 throw new Exception("El nombre de usuario esta vacio");
             }
-            else if(model.PassWord.Trim().Length == 0)
+            else if (model.PassWord.Trim().Length == 0)
             {
                 throw new Exception("la clave  del usuario esta vacioa");
             }
-            else if(!(await DoesRollExistsAsync(model.Role)))
+            else if (!(await DoesRollExistsAsync(model.Role)))
             {
                 throw new Exception("El rol no existe");
             }
-            var user =await  GetUserByUserNameAsync(model.UserName);
-            if(user != null)
+            var user = await GetUserByUserNameAsync(model.UserName);
+            if (user != null)
             {
                 throw new Exception("El usuario ya existe!");
             }
@@ -126,5 +126,15 @@ namespace Tools.Loan.DataAcces.Services
                 context.SaveChanges();
             }
         }
-    }
+
+        public async Task<List<UserTableModel>> buscarUsuario(string buscar)
+        {
+
+            using (var context = new AppContext())
+            {
+                return await context.Set<Usuario>().Select(x => new UserTableModel { Nombre = x.Nombre }).Where(x => x.Nombre.Trim().ToLower().Contains(buscar)).ToListAsync(); 
+            }
+         }
+    }   
 }
+

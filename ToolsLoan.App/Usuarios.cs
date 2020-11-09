@@ -64,9 +64,12 @@ namespace ToolsLoan.App
 
         }
 
-        private void txtBuscar_TextChanged_1(object sender, EventArgs e)
+        private async void txtBuscar_TextChanged_1(object sender, EventArgs e)
         {
-
+            if (txtBuscar.Text.Trim().Length<1)
+            {
+                
+            }
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)

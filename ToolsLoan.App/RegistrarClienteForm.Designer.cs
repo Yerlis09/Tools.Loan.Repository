@@ -90,6 +90,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(208, 20);
             this.txtBuscar.TabIndex = 14;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // dataGridView1
             // 
