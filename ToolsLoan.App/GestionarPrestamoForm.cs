@@ -31,7 +31,7 @@ namespace ToolsLoan.App
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new EntradaForm().ShowDialog();
+            new EntradaForm(this).ShowDialog();
         }
 
         private async void button2_Click(object sender, EventArgs e)

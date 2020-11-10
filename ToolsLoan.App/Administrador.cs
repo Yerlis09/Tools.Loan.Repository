@@ -44,7 +44,9 @@ namespace ToolsLoan.App
 
         private void btninicio_Click(object sender, EventArgs e)
         {
-            
+            abrirformhijo(new RegistrarClienteForm());
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = false;
         }
         private void abrirformhijo(object FormHijo)
         {

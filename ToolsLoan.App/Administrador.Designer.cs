@@ -148,7 +148,7 @@
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(28)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Location = new System.Drawing.Point(6, 206);
+            this.button4.Location = new System.Drawing.Point(6, 202);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(163, 35);
             this.button4.TabIndex = 3;
@@ -160,7 +160,7 @@
             // 
             this.btnherra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(28)))));
             this.btnherra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnherra.Location = new System.Drawing.Point(6, 156);
+            this.btnherra.Location = new System.Drawing.Point(6, 118);
             this.btnherra.Name = "btnherra";
             this.btnherra.Size = new System.Drawing.Size(163, 35);
             this.btnherra.TabIndex = 2;
@@ -172,7 +172,7 @@
             // 
             this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(28)))));
             this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnUser.Location = new System.Drawing.Point(6, 101);
+            this.btnUser.Location = new System.Drawing.Point(6, 77);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(163, 35);
             this.btnUser.TabIndex = 1;
@@ -184,11 +184,11 @@
             // 
             this.btninicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(28)))));
             this.btninicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btninicio.Location = new System.Drawing.Point(6, 50);
+            this.btninicio.Location = new System.Drawing.Point(6, 161);
             this.btninicio.Name = "btninicio";
             this.btninicio.Size = new System.Drawing.Size(163, 35);
             this.btninicio.TabIndex = 0;
-            this.btninicio.Text = "Inicio";
+            this.btninicio.Text = "Registrar Cliente";
             this.btninicio.UseVisualStyleBackColor = false;
             this.btninicio.Click += new System.EventHandler(this.btninicio_Click);
             // 
@@ -204,6 +204,9 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::ToolsLoan.App.Properties.Resources.HOLIS;
             this.pictureBox2.Location = new System.Drawing.Point(169, 219);
             this.pictureBox2.Name = "pictureBox2";
@@ -214,6 +217,9 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::ToolsLoan.App.Properties.Resources.Preparate_para_las_Pruebas_SENA_III_Trimestre_;
             this.pictureBox1.Location = new System.Drawing.Point(210, 89);
             this.pictureBox1.Name = "pictureBox1";

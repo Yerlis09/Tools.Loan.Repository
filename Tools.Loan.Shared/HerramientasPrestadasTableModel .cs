@@ -15,7 +15,7 @@ namespace Tools.Loan.Shared
         public string Address { get; set; }
         public int HerramientaId { get; set; }
         public string HerramintasPorNombre { get; set; }
-        public int TotalDeherrametas { get; set; }
+        public int TotalDeherrametasPrestadas { get; set; }
         public string UsuariosQueGestionaron { get; set; }
         public string FechaEntrada  { get; set; }
         public string FechaSalida { get; set; }

@@ -52,9 +52,10 @@ namespace ToolsLoan.App
 
         }
 
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        private async void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-
+            var txt = ((TextBox)sender).Text;
+            dataGridView2.DataSource = await _herramientaService.BuscarEnHerramientaTableAsync(txt);
         }
 
         private async void btnactua_Click(object sender, EventArgs e)

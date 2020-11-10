@@ -64,7 +64,55 @@ namespace Tools.Loan.DataAcces.Services
         }
 
 
-        // aqui tienes un ejemeplo
+        public async Task<List<HerramientTableModel>> BuscarEnHerramientaTableAsync(string filtro)
+        {
+            using (AppContext con = new AppContext())
+            {
+                filtro = filtro ?? string.Empty;
+                filtro = filtro.ToLower().Trim();
+                if (filtro == string.Empty)
+                {
+                    return await GetHerramientaTableAsync();
+                }
+                return await con.Set<Herramienta>().Include(x => x.Prestamos).Include(x => x.HerramientaMetaData).ThenInclude(x => x.Categoria).Select(x => new HerramientTableModel
+                {
+                    Categoria = (x.HerramientaMetaData.Categoria == null) ? "N/A" : x.HerramientaMetaData.Categoria.Nombre,
+                    Descripción = x.Descripción,
+                    FechaRentada = (x.Rentada == null) ? "N/A" : x.Rentada.Value.ToString(),
+                    Rentada = (x.Rentada == null) ? "NO" : "SI",
+                    Id = x.Id,
+                    Marca = x.HerramientaMetaData.Marca,
+                    Nombre = x.HerramientaMetaData.Nombre,
+                    Puesto = x.Puesto,
+                    Serial = x.HerramientaMetaData.Serial,
+                    PrestamosEnTotal = x.Prestamos.Count.ToString()
+
+
+                }).Where(x =>
+                x.Categoria.Trim().ToLower().Contains(filtro)
+                ||
+                x.Descripción.Trim().ToLower().Contains(filtro)
+                   ||
+                x.FechaRentada.Trim().ToLower().Contains(filtro)
+                   ||
+                x.Id.ToString().Trim().ToLower().Contains(filtro)
+                   ||
+                x.Marca.Trim().ToLower().Contains(filtro)
+                   ||
+                x.Nombre.Trim().ToLower().Contains(filtro)
+                   ||
+                x.PrestamosEnTotal.Trim().ToLower().Contains(filtro)
+                     ||
+                x.Puesto.Trim().ToLower().Contains(filtro)
+                        ||
+                x.Rentada.Trim().ToLower().Contains(filtro)
+                          ||
+                x.Serial.Trim().ToLower().Contains(filtro)
+
+                ).ToListAsync();
+            }
+        }
+
 
         public async Task<List<HerramientTableModel>> GetHerramientaTableAsync()
         {
@@ -84,7 +132,7 @@ namespace Tools.Loan.DataAcces.Services
                     PrestamosEnTotal = x.Prestamos.Count.ToString()
 
 
-                }).ToListAsync();
+                }).OrderByDescending(x=> x.Id).ToListAsync();
             }
         }
 
@@ -211,7 +259,49 @@ namespace Tools.Loan.DataAcces.Services
 
         }
 
-        public async Task<List<HerramientasPrestadasTableModel>> HerramientaPrestadasAsync()
+
+
+        public async Task<List<HistorialDeHerramientasPrestadasTable>> HistorialDeHerramientaPrestadasAsync()
+        {
+            using (var con = new AppContext())
+            {
+
+                var query = con.Set<Prestamo>();
+                var clientequery = con.Set<Cliente>().AsQueryable();
+                var herramientasQuery = con.Set<Herramienta>().AsQueryable();
+                var UsuarioQuery = con.Set<Usuario>().AsQueryable();
+                var rs = (from q in query
+                          join c in clientequery on q.ClienteId equals c.Id
+                          join h in herramientasQuery on q.HerramientaId equals h.Id
+                          join u in UsuarioQuery on q.UsuarioId equals u.Id
+                          orderby q.FechaEntrada descending
+                          select
+                          new HistorialDeHerramientasPrestadasTable
+                          {
+                              Estado = (q.HerramientaDevultaFecha != null && h.Rentada == null) ? "Herraminta Devuelta Fecha" + q.HerramientaDevultaFecha.ToString() : "No ha sido Devuleta",
+                              Address = c.Cargo,
+                              Apellido = c.Apellido,
+                              HerramientaId = h.Id,
+                              HerramintasPorNombre = h.HerramientaMetaData.Nombre,
+                              Identificacion = c.Identificacion,
+                              Nombre = c.Nombre,
+                              TotalDeherrametasPrestadas = herramientasQuery.Where(x => x.Prestamos.Any(y => y.ClienteId == c.Id)).Count(),
+                              UsuariosQueGestionaron = u.Nombre,
+                              RentaRetrasada = (q.HerramientaDevultaFecha == null && h.Rentada == null)?(q.FechaSalida - DateTime.Now).TotalDays > -1 ? string.Format("Le quedan  {0} Dias para entregar", (int)(q.FechaSalida - DateTime.Now).TotalDays) : "La Entrega esta retrasada" :"Ya devolvio",
+                              FechaEntrada = q.FechaEntrada.ToString(),
+                              FechaSalida = q.FechaSalida.ToString(),
+                              ClienteId = c.Id.ToString(),
+                              PrestamoId = q.Id.ToString()
+
+                          }
+                                                  ) ;
+
+                return await rs.ToListAsync();
+
+            }
+        }
+
+            public async Task<List<HerramientasPrestadasTableModel>> HerramientaPrestadasAsync()
         {
 
 
@@ -226,7 +316,8 @@ namespace Tools.Loan.DataAcces.Services
                           join c in clientequery on q.ClienteId equals c.Id
                           join h in herramientasQuery on q.HerramientaId equals h.Id
                           join u in UsuarioQuery on q.UsuarioId equals u.Id
-                          where h.Rentada != null
+                          where h.Rentada != null && q.HerramientaDevultaFecha == null
+                          orderby q.FechaEntrada descending
                           select
                           new HerramientasPrestadasTableModel
                           {
@@ -236,7 +327,7 @@ namespace Tools.Loan.DataAcces.Services
                               HerramintasPorNombre = h.HerramientaMetaData.Nombre,
                               Identificacion = c.Identificacion,
                               Nombre = c.Nombre,
-                              TotalDeherrametas = herramientasQuery.Where(x => x.Prestamos.Any(y => y.ClienteId == c.Id)).Count(),
+                              TotalDeherrametasPrestadas = herramientasQuery.Where(x => x.Prestamos.Any(y => y.ClienteId == c.Id && y.Herramienta.Rentada != null)).Count(),
                               UsuariosQueGestionaron = u.Nombre,
                               RentaRetrasada = (q.FechaSalida - DateTime.Now).TotalDays > -1 ? string.Format("Le quedan  {0} Dias para entregar", (int)(q.FechaSalida - DateTime.Now).TotalDays) : "La Entrega esta retrasada",
                               FechaEntrada = q.FechaEntrada.ToString(),
@@ -279,7 +370,8 @@ namespace Tools.Loan.DataAcces.Services
                             Descripción = model.Description,
                             FechaEntrada = DateTime.Now,
                             FechaSalida = model.FechaDeSalida,
-                            UsuarioId = model.UsuarioId
+                            UsuarioId = model.UsuarioId,
+                            HerramientaDevultaFecha = null
 
                         });
 

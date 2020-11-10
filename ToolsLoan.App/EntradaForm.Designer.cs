@@ -43,7 +43,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnRegistra = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.texCargo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -180,6 +179,7 @@
             this.txtdes.Name = "txtdes";
             this.txtdes.Size = new System.Drawing.Size(347, 111);
             this.txtdes.TabIndex = 21;
+            this.txtdes.TextChanged += new System.EventHandler(this.txtdes_TextChanged);
             // 
             // label19
             // 
@@ -215,7 +215,6 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.btnRegistra);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.texCargo);
             this.groupBox1.Controls.Add(this.label3);
@@ -231,18 +230,6 @@
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Orden de Salida";
-            // 
-            // btnRegistra
-            // 
-            this.btnRegistra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(28)))));
-            this.btnRegistra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRegistra.Location = new System.Drawing.Point(53, 243);
-            this.btnRegistra.Name = "btnRegistra";
-            this.btnRegistra.Size = new System.Drawing.Size(120, 30);
-            this.btnRegistra.TabIndex = 33;
-            this.btnRegistra.Text = "Registrar Nuevo";
-            this.btnRegistra.UseVisualStyleBackColor = false;
-            this.btnRegistra.Click += new System.EventHandler(this.button2_Click);
             // 
             // label6
             // 
@@ -423,7 +410,6 @@
         public System.Windows.Forms.DataGridView RentardataGridView;
         public System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnRegistra;
         public System.Windows.Forms.ComboBox cmbnombre;
     }
 }

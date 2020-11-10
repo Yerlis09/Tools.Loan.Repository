@@ -170,3 +170,4 @@ C:\Users\Wilirambo\Documents\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\Tools
 C:\Users\Wilirambo\Documents\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.pdb
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.Diseingner.resources
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.RegistrarClienteForm.resources
+C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.PrestamosRegistradosForm.resources

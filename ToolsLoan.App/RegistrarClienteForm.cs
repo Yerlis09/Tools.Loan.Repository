@@ -45,6 +45,8 @@ namespace ToolsLoan.App
                      Apellido = this.texApellido.Text,
                      Cargo = this.texCargo.Text,
 
+                  
+
                 });
                 MessageBox.Show("Creado!");
                 await LoadData();
@@ -53,6 +55,11 @@ namespace ToolsLoan.App
             {
                 MessageBox.Show(error.Message);
             }
+
+            textBox1.Text = "";
+            texNombreC.Text = "";
+            texApellido.Text = "";
+            texCargo.Text = "";
 
             btnguardar.Enabled = true;
         }

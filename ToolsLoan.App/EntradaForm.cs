@@ -19,8 +19,16 @@ namespace ToolsLoan.App
         private Cliente cliente;
         readonly HerramientaService _herramientaService = new HerramientaService();
         private List<HerramientasDisponiblesTableModel> HerramientasSelecionandas = new List<HerramientasDisponiblesTableModel>();
+        private readonly GestionarPrestamoForm _Form;
+        public EntradaForm(GestionarPrestamoForm form):this()
+        {
+            _Form = form;
+           
+        }
+
         public EntradaForm()
         {
+           
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
         }
@@ -71,8 +79,10 @@ namespace ToolsLoan.App
                       
                     }
                 }
-
-                RentardataGridView.DataSource = dt2;
+                if (RentardataGridView != null)
+                {
+                    RentardataGridView.DataSource = dt2;
+                }
             }
             else
             {
@@ -109,10 +119,21 @@ namespace ToolsLoan.App
                     FechaDeSalida = dateTimePicker1.Value,
                     Herramientas = list,
                     UsuarioId = Program.User.UserId
-
-
+                   
                 });
                 MessageBox.Show("Rentado!");
+                //aqui es el error ? 
+                // si, pruebalo
+                // si ya se cual es el error deja lo arrgelo
+
+                if (_Form != null)
+                {
+                    _Form.dataGridView2.DataSource = await _herramientaService.HerramientaPrestadasAsync();
+                }
+                // hagasmos un hack por haora
+                this.RentardataGridView.DataSource = null;
+                this.RentardataGridView.Rows.Clear();
+                await LoadData();
             }
             else
             {
@@ -124,13 +145,17 @@ namespace ToolsLoan.App
 
         private void button2_Click(object sender, EventArgs e)
         {
-            RegistrarClienteForm client = new RegistrarClienteForm();
-            client.Show();
+           
 
 
         }
 
         private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtdes_TextChanged(object sender, EventArgs e)
         {
 
         }

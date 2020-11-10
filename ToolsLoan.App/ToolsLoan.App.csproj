@@ -208,6 +208,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrestamosRegistradosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrestamosRegistradosForm.Designer.cs">
+      <DependentUpon>PrestamosRegistradosForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrarClienteForm.cs">
@@ -257,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrestamosRegistradosForm.resx">
+      <DependentUpon>PrestamosRegistradosForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
