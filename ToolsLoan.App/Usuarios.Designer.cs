@@ -42,18 +42,17 @@
             this.txtcontra = new System.Windows.Forms.TextBox();
             this.txtuser = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.btneli = new System.Windows.Forms.Button();
             this.btnactua = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -173,16 +172,6 @@
             this.panel6.Size = new System.Drawing.Size(274, 38);
             this.panel6.TabIndex = 26;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::ToolsLoan.App.Properties.Resources.search_30px;
-            this.pictureBox3.Location = new System.Drawing.Point(7, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 28);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 15;
-            this.pictureBox3.TabStop = false;
-            // 
             // txtBuscar
             // 
             this.txtBuscar.Location = new System.Drawing.Point(56, 9);
@@ -254,28 +243,15 @@
             this.dataGridView2.TabIndex = 28;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(115)))), ((int)(((byte)(35)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 429);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 31);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "Nuevo";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // btneli
             // 
             this.btneli.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btneli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(115)))), ((int)(((byte)(35)))));
             this.btneli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btneli.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneli.Location = new System.Drawing.Point(234, 429);
+            this.btneli.Location = new System.Drawing.Point(113, 427);
             this.btneli.Name = "btneli";
-            this.btneli.Size = new System.Drawing.Size(78, 31);
+            this.btneli.Size = new System.Drawing.Size(106, 31);
             this.btneli.TabIndex = 29;
             this.btneli.Text = "Eliminar";
             this.btneli.UseVisualStyleBackColor = false;
@@ -286,12 +262,22 @@
             this.btnactua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(115)))), ((int)(((byte)(35)))));
             this.btnactua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnactua.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnactua.Location = new System.Drawing.Point(123, 429);
+            this.btnactua.Location = new System.Drawing.Point(12, 427);
             this.btnactua.Name = "btnactua";
             this.btnactua.Size = new System.Drawing.Size(95, 31);
             this.btnactua.TabIndex = 28;
             this.btnactua.Text = "Acutualizar";
             this.btnactua.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::ToolsLoan.App.Properties.Resources.search_30px;
+            this.pictureBox3.Location = new System.Drawing.Point(7, 5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(43, 28);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
             // 
             // Usuarios
             // 
@@ -299,7 +285,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(832, 470);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btneli);
             this.Controls.Add(this.btnactua);
             this.Controls.Add(this.groupBox2);
@@ -313,9 +298,9 @@
             this.groupBox1.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -337,7 +322,6 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btneli;
         private System.Windows.Forms.Button btnactua;
     }

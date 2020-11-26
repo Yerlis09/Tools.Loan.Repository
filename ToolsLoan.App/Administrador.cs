@@ -78,8 +78,15 @@ namespace ToolsLoan.App
 
         private void button4_Click(object sender, EventArgs e)
         {
-            new GestionarPrestamoForm().Show();
-            
+            abrirformhijo(new GestionarPrestamoForm());
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = false;
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

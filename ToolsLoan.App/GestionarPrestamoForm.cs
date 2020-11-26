@@ -70,5 +70,11 @@ namespace ToolsLoan.App
             }
             button2.Enabled = true;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            PrestamosRegistradosForm presta = new PrestamosRegistradosForm();
+            presta.Show();
+        }
     }
 }

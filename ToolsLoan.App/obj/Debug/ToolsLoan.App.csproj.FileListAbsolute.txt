@@ -81,7 +81,6 @@ C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.GestionarPrestamoForm.resources
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.HerramientaMetaDateForm.resources
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.HerramientasForm.resources
-C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.SalidaForm.resources
 C:\Users\caste\OneDrive\Escritorio\Proyecto\Tools.Loan.Repository\ToolsLoan.App\obj\Debug\ToolsLoan.App.EntradaForm.resources
 C:\Users\Wilirambo\Documents\Tools.Loan.Repository\ToolsLoan.App\bin\Debug\ToolsLoan.App.exe.config
 C:\Users\Wilirambo\Documents\Tools.Loan.Repository\ToolsLoan.App\bin\Debug\ToolsLoan.App.exe

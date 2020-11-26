@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btneli = new System.Windows.Forms.Button();
@@ -46,11 +45,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,7 +60,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(659, 75);
+            this.panel1.Size = new System.Drawing.Size(729, 75);
             this.panel1.TabIndex = 2;
             // 
             // button1
@@ -88,16 +88,6 @@
             this.panel6.Size = new System.Drawing.Size(274, 38);
             this.panel6.TabIndex = 41;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::ToolsLoan.App.Properties.Resources.search_30px;
-            this.pictureBox3.Location = new System.Drawing.Point(7, 7);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 28);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 15;
-            this.pictureBox3.TabStop = false;
-            // 
             // txtBuscar
             // 
             this.txtBuscar.Location = new System.Drawing.Point(56, 9);
@@ -121,7 +111,7 @@
             this.btneli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(115)))), ((int)(((byte)(35)))));
             this.btneli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btneli.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneli.Location = new System.Drawing.Point(222, 383);
+            this.btneli.Location = new System.Drawing.Point(222, 399);
             this.btneli.Name = "btneli";
             this.btneli.Size = new System.Drawing.Size(101, 31);
             this.btneli.TabIndex = 43;
@@ -134,7 +124,7 @@
             this.btnactua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(115)))), ((int)(((byte)(35)))));
             this.btnactua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnactua.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnactua.Location = new System.Drawing.Point(26, 383);
+            this.btnactua.Location = new System.Drawing.Point(26, 399);
             this.btnactua.Name = "btnactua";
             this.btnactua.Size = new System.Drawing.Size(103, 31);
             this.btnactua.TabIndex = 42;
@@ -231,6 +221,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label6);
@@ -247,12 +238,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar Cliente";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::ToolsLoan.App.Properties.Resources.search_30px;
+            this.pictureBox3.Location = new System.Drawing.Point(7, 7);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(43, 28);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            // 
             // RegistrarClienteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(659, 453);
+            this.ClientSize = new System.Drawing.Size(729, 453);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btneli);
             this.Controls.Add(this.btnactua);
@@ -266,10 +267,10 @@
             this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
