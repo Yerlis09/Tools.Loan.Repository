@@ -30,8 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btneli = new System.Windows.Forms.Button();
             this.btnactua = new System.Windows.Forms.Button();
@@ -45,12 +43,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,32 +72,13 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel6.Controls.Add(this.pictureBox3);
-            this.panel6.Controls.Add(this.txtBuscar);
-            this.panel6.Location = new System.Drawing.Point(36, 92);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(274, 38);
-            this.panel6.TabIndex = 41;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Location = new System.Drawing.Point(56, 9);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(208, 20);
-            this.txtBuscar.TabIndex = 14;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 156);
+            this.dataGridView1.Location = new System.Drawing.Point(26, 135);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(297, 221);
+            this.dataGridView1.Size = new System.Drawing.Size(311, 242);
             this.dataGridView1.TabIndex = 40;
             // 
             // btneli
@@ -117,6 +93,7 @@
             this.btneli.TabIndex = 43;
             this.btneli.Text = "Eliminar";
             this.btneli.UseVisualStyleBackColor = false;
+            this.btneli.Click += new System.EventHandler(this.btneli_Click);
             // 
             // btnactua
             // 
@@ -231,22 +208,12 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.texNombreC);
             this.groupBox1.Controls.Add(this.btnguardar);
-            this.groupBox1.Location = new System.Drawing.Point(356, 135);
+            this.groupBox1.Location = new System.Drawing.Point(356, 127);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(292, 295);
+            this.groupBox1.Size = new System.Drawing.Size(292, 303);
             this.groupBox1.TabIndex = 54;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar Cliente";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::ToolsLoan.App.Properties.Resources.search_30px;
-            this.pictureBox3.Location = new System.Drawing.Point(7, 7);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 28);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 15;
-            this.pictureBox3.TabStop = false;
             // 
             // RegistrarClienteForm
             // 
@@ -257,7 +224,6 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btneli);
             this.Controls.Add(this.btnactua);
-            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -265,12 +231,9 @@
             this.Text = "RegistrarClienteForm";
             this.Load += new System.EventHandler(this.RegistrarClienteForm_Load);
             this.panel1.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -278,9 +241,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btneli;

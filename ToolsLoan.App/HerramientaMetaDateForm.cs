@@ -54,28 +54,14 @@ namespace ToolsLoan.App
 
         private async void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            // aqui ya esta 
+
             var txt = ((TextBox)sender).Text;
             dataGridView2.DataSource = await _herramientaService.BuscarEnHerramientaTableAsync(txt);
         }
 
-        private async void btnactua_Click(object sender, EventArgs e)
+        private void btnactua_Click(object sender, EventArgs e)
         {
-            btnactua.Enabled = false;
-            var dt = dataGridView2;
-            if (dt.SelectedRows.Count > 0)
-            {
-                var value = Convert.ToInt32(dt.SelectedRows[0].Cells["Id"].Value);
-                //var historial = await _herramientaService.GetHerramientaHistoryAsync(value);
-                new HerramientasForm(value).ShowDialog();
-                await LoadData();
-            }
-            else
-            {
-                MessageBox.Show("Tiene que selcionar una herramienta");
-
-            }
-            btnactua.Enabled = true;
+ 
         }
 
         private async void btnHistorial_Click(object sender, EventArgs e)

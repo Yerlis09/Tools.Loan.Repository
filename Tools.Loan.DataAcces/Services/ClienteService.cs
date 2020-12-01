@@ -84,6 +84,33 @@ namespace Tools.Loan.DataAcces.Services
             }
         }
 
+        public async Task BorrarClienteAsync(int id)
+        {
+            var cliente = await GetClienteByIdAsync(id);
+            if (cliente == null)
+            {
+                throw new Exception("La Cliente no existe");
+            }
+
+            using (var con = new AppContext())
+            {
+
+                con.Remove(cliente);
+
+                await con.SaveChangesAsync();
+            }
+
+        }
+
+        public async Task<Cliente> GetClienteByIdAsync(int id)
+        {
+            using (AppContext con = new AppContext())
+            {
+
+                return await con.Set<Cliente>().FirstOrDefaultAsync(cliente => cliente.Id.Equals(id));
+            }
+        }
+
     }
 }
 

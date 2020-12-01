@@ -14,7 +14,7 @@ namespace ToolsLoan.App
 {
     public partial class Usuarios : Form
     {
-        protected readonly UsuarioService _UsuarioService;
+        protected UsuarioService _UsuarioService = new UsuarioService();
         public Usuarios()
         {
             _UsuarioService = new UsuarioService();
@@ -37,7 +37,7 @@ namespace ToolsLoan.App
         {
             try
             {
-                // se me olvido algo cunado hagas codgio asyncronico tienes que hacer esto 
+              
                 btnguardar.Enabled = false;
                 await _UsuarioService.CreateUser(new UserModel
                 {
@@ -66,15 +66,45 @@ namespace ToolsLoan.App
 
         private async void txtBuscar_TextChanged_1(object sender, EventArgs e)
         {
-            if (txtBuscar.Text.Trim().Length<1)
-            {
-                
-            }
+           
+            var txt = ((TextBox)sender).Text;
+            dataGridView2.DataSource = await _UsuarioService.BuscarEnUsuarioTableAsync(txt);
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private async void btneli_Click(object sender, EventArgs e)
+        {
+            btneli.Enabled = false;
+
+            var dt = dataGridView2;
+            if (dt.SelectedRows.Count > 0)
+            {
+                var value = Convert.ToInt32(dt.SelectedRows[0].Cells["Id"].Value);
+                DialogResult dialogResult = MessageBox.Show("Usuario ID :" + value, "Estas seguro de querer borrar ?", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+
+                    await _UsuarioService.BorrarUsuarioAsync(value);
+                    await LoadData();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Tiene que selcionar una herramienta");
+
+            }
+
+            btneli.Enabled = true;
+        }
+
+        private  void btnactua_Click(object sender, EventArgs e)
+        {
+         
         }
     }
 }

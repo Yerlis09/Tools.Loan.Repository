@@ -127,14 +127,105 @@ namespace Tools.Loan.DataAcces.Services
             }
         }
 
-        public async Task<List<UserTableModel>> buscarUsuario(string buscar)
-        {
 
-            using (var context = new AppContext())
+        public async Task<List<UserTableModel>> BuscarEnUsuarioTableAsync(string filtro)
+        {
+            using (AppContext con = new AppContext())
             {
-                return await context.Set<Usuario>().Select(x => new UserTableModel { Nombre = x.Nombre }).Where(x => x.Nombre.Trim().ToLower().Contains(buscar)).ToListAsync(); 
+                filtro = filtro ?? string.Empty;
+                filtro = filtro.ToLower().Trim();
+                if (filtro == string.Empty)
+                {
+                    return await GetUsuarioTableAsync();
+                }
+                return await con.Set<Usuario>().Include(x => x.Nombre).Include(x => x.UserName).Include(x => x.Role).Select(x => new UserTableModel
+                {
+                   
+                    Nombre = x.Nombre,
+                    UserName = x.UserName,
+                    Role = x.Role.RoleName,
+                    Id = x.Id
+
+
+
+                }).Where(x =>
+                x.Nombre.Trim().ToLower().Contains(filtro)
+                   ||
+                x.UserName.Trim().ToLower().Contains(filtro)
+
+                  ||
+                x.Role.Trim().ToLower().Contains(filtro)
+                  ||
+                x.Id.ToString().Trim().ToLower().Contains(filtro)
+
+                ).ToListAsync();
             }
-         }
+        }
+
+        public async Task<List<UserTableModel>> GetUsuarioTableAsync()
+        {
+            using (AppContext con = new AppContext())
+            {
+                return await con.Set<Usuario>().Include(x => x.Nombre).Include(x => x.UserName).Include(x => x.Role).Select(x => new UserTableModel
+                {
+                    Nombre = x.Nombre,
+                    UserName = x.UserName,
+                    Role = x.Role.RoleName,
+                    Id = x.Id
+
+                }).OrderByDescending(x => x.Id).ToListAsync();
+            }
+        }
+
+        public async Task BorrarUsuarioAsync(int id)
+        {
+            var usuario = await GetUsuarioByIdAsync(id);
+            if (usuario == null)
+            {
+                throw new Exception("La herrameinta no existe");
+            }
+
+            using (var con = new AppContext())
+            {
+
+                con.Remove(usuario);
+
+                await con.SaveChangesAsync();
+            }
+
+        }
+
+        public async Task<Usuario> GetUsuarioByIdAsync(int id)
+        {
+            using (AppContext con = new AppContext())
+            {
+
+                return await con.Set<Usuario>().FirstOrDefaultAsync(usuario => usuario.Id.Equals(id));
+            }
+        }
+
+        public async Task ActualizarUsuariotaAsync(UserTableModel model)
+        {
+            var usuario = await GetUsuarioByIdAsync(model.Id);
+            if (usuario == null)
+            {
+                throw new Exception("La usuario no existe");
+            }
+
+            using (var con = new AppContext())
+            {
+                usuario.Nombre = model.Nombre;
+                usuario.UserName = model.UserName;
+                usuario.Role.RoleName = model.Role;
+                usuario.Password = model.Password;
+
+                con.Update(usuario);
+
+                await con.SaveChangesAsync();
+            }
+
+        }
+
     }   
 }
 

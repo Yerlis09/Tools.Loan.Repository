@@ -85,6 +85,32 @@ namespace ToolsLoan.App
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
         }
+
+        private async void btneli_Click(object sender, EventArgs e)
+        {
+             btneli.Enabled = false;
+
+            var dt = dataGridView1;
+            if (dt.SelectedRows.Count > 0)
+            {
+                var value = Convert.ToInt32(dt.SelectedRows[0].Cells["Id"].Value);
+                DialogResult dialogResult = MessageBox.Show("Cliente ID :" + value, "Estas seguro de querer borrar ?", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+
+                    await _clienteService.BorrarClienteAsync(value);
+                    await LoadData();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Tiene que selcionar una herramienta");
+
+            }
+
+            btneli.Enabled = true;
+        }
     }
     
 }
